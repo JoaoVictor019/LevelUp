@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulário</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            color: white;
+            background-image: url(fundos/quarto2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .conteudoPrincipal {
+            border: 4px solid black;
+            padding: 10px;
+            background-color: #2E2E2E;
+            width: 850px;
+            height: auto;
+            margin: 60px auto;
+            max-width: 90%;
+        }
+
+        .navegacao {
+            border: 2px solid black;
+            border-radius: 4px;
+            background-color: #2E2E2E;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            display: flex;
+            font-family: 'Press Start 2P';
+  
+        }
+
+        a:link {
+            color: #5882FA;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #A9F5F2;
+            padding: 3px;
+        }
+
+        a:visited {
+            color: #58ACFA;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            margin-top: 5px;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        .required:after {
+            content: "*";
+            color: red;
+        }
+
+        .submit-btn {
+            display: inline-block;
+            background-color: #A4A4A4;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #8A8A8A;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navegacao">
+        <a href="reviews.html">Reviews</a>
+        <b>|</b>
+        <a href="memes.html">MEMES</a>
+        <b>|</b>
+        <a href="tierlist.html">Tier List</a>
+        <div><img src="fundos/poke.gif" width="50" height="50"></div>
+    </div>
+
+    <div class="conteudoPrincipal">
+        <h1>Bem-vindo(a) à página de formulário</h1>
+        <p>Ajude-nos a entender melhor seus gostos e os do nosso público! Preencha o formulário abaixo:</p>
+
+        <form action="https://webhook.site/959ecacc-8edf-4c95-a359-6e3a3ed6afba" method="post">
+        <form action="https://webhook.site/959ecacc-8edf-4c95-a359-6e3a3ed6afba" method="post">
+            <label for="nome" class="required">Seu nome ou nick:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome ou nick" required>
+
+            <label for="como-conheceu" class="required">Como conheceu nosso site?</label>
+
+            
+            <select id="como-conheceu" name="como_conheceu" required>
+                
+                <option value="">Selecione</option>
+                <option value="Indicação de um amigo">Indicação de um amigo</option>
+                <option value="Vi uma publicidade">Vi uma publicidade</option>
+                <option value="Achei sem querer querendo">Achei sem querer querendo</option>
+            
+            </select>
+
+            <label for="conteudo" class="required">Está gostando do conteúdo?</label>
+            
+            <select id="conteudo" name="conteudo" required>
+                
+                <option value="">Selecione</option>
+                <option value="Sim, o conteúdo é bem legal">Sim, o conteúdo é bem legal</option>
+                <option value="Mais ou menos, tenho ressalvas">Mais ou menos, tenho ressalvas</option>
+                <option value="Não estou gostando">Não estou gostando</option>
+            
+            </select>
+
+            <label for="sugestao" class="required">Sugestão de jogo:</label>
+            
+            <input type="text" id="sugestao" name="sugestao" placeholder="Digite sua sugestão de jogo">
+
+            <label for="classificacao" class="required">Classificação do site:</label>
+            
+            <select id="classificacao" name="classificacao" required>
+                
+                <option value="">Selecione</option>
+                <option value="1">1 Estrela</option>
+                <option value="2">2 Estrelas</option>
+                <option value="3">3 Estrelas</option>
+                <option value="4">4 Estrelas</option>
+                <option value="5">5 Estrelas</option>
+            
+            </select>
+
+            <label for="comentario">Comentário adicional:</label>
+            <textarea id="comentario" name="comentario" rows="4" placeholder="Digite seu comentário adicional"></textarea>
+
+            
+            <input type="submit" class="submit-btn" value="Enviar formulário">
+        
+        </form>
+
+        <div><img src="fundos/jolteon.gif" height="110" width="110" style="padding: 30px 370px;"></div>
+    </div>
+</body>
+
+</html>
