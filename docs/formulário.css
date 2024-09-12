@@ -1,0 +1,77 @@
+body {
+    color: white;
+    background-image: url(fundos/quarto2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.conteudoPrincipal {
+    border: 4px solid black;
+    padding: 10px;
+    background-color: #2E2E2E;
+    width: 850px;
+    height: auto;
+    margin: 60px auto;
+    max-width: 90%;
+}
+
+.navegacao {
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: #2E2E2E;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    font-family: 'Press Start 2P';
+}
+
+a:link {
+    color: #5882FA;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #A9F5F2;
+    padding: 3px;
+}
+
+a:visited {
+    color: #58ACFA;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.required:after {
+    content: "*";
+    color: red;
+}
+
+.submit-btn {
+    display: inline-block;
+    background-color: #A4A4A4;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #8A8A8A;
+}
