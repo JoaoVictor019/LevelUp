@@ -58,10 +58,13 @@ body {
     }
 }
 
-/* Adicionando responsividade para formulários e botões */
+h1, p {
+    color: white;
+}
+
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* As caixas de input ficarão uma abaixo da outra */
 }
 
 .form-group {
