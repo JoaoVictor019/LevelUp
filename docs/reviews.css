@@ -12,7 +12,6 @@ body {
     font-style: white;
     background-color: #2E2E2E;
     border: 0.2rem solid black;
-    border-radius: 2rem;
     padding: 1.25rem;
     margin: 1rem;
     font-size: 1.25rem; /* Usando rem para tamanho de fonte */
