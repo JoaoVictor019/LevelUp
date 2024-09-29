@@ -1,74 +1,55 @@
-body {
-    background-image: url(fundos/resident.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-}
+body{
 
-.navegacao {
-    font-style: white;
-    background-color: #2E2E2E;
-    border: 3px solid black;
-    border-radius: 40px;
-    padding: 20px 20px;
-    margin: 10px;
-    font-size: 20px;
-    font-family: 'Press Start 2P', cursive;
-    display: flex;
-    flex-wrap: wrap; /* Adicionado para responsividade */
-    justify-content: center; /* Adicionado para centralizar no pequeno espaço */
-}
+            	background-image: url(fundos/resident.jpg);
+            	background-size: cover;
+            	background-repeat: no-repeat;
+    
+            	color: white;
+            }
 
-a:link {
-    text-decoration: none;
-    color: #5882FA;
-}
 
-a:hover {
-    color: #A9F5F2;
-    padding: 3px;
-    margin: 2px;
-}
 
-.conteiner {
-    border: groove black;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column; /* Mudança para coluna para melhor responsividade */
-    align-items: center; /* Centraliza os itens */
-    background-color: #2E2E2E;
-    float: none; /* Remover float para melhor controle de layout */
-    margin: 20px;
-}
 
-.texto {
-    padding: 10px;
-}
 
-/* Media Queries para tornar o layout responsivo */
-@media (max-width: 800px) {
-    .navegacao {
-        font-size: 16px; /* Ajuste do tamanho da fonte para telas menores */
-        padding: 10px;
-    }
 
-    .conteiner {
-        width: 100%; /* A largura do container ocupará 100% da tela */
-        margin: 0; /* Remove margem lateral para pequenos dispositivos */
-    }
+             .navegacao{
 
-    .texto {
-        padding: 5px; /* Ajuste do padding para telas menores */
-    }
+             	font-style: white;
+             	background-color: #2E2E2E;
+             	border: 3px solid black;
+             	border-radius:40px solid black;
+             	padding: 20px 20px;
+                margin: 10px;
+                font-size: 20px;
+                font-family: 'Press Start 2P', cursive;
+                display: flex;
 
-    img {
-        width: 100%; /* A imagem ocupará 100% da largura do seu container */
-        height: auto; /* Mantém a proporção da imagem */
-    }
-}
+             }
 
-@media (max-width: 500px) {
-    .navegacao {
-        flex-direction: column; /* Muda a direção para coluna em telas muito pequenas */
-    }
-}
+             a:link{
+             	text-decoration: none;
+             	color: #5882FA;
+             }
+
+             a:hover{
+             	color:#A9F5F2;
+             	padding: 3px;
+             	margin: 2px;
+             }
+
+            
+
+            .conteiner{
+
+            	border: groove black;
+            	margin-top: 40px;
+            	display: flex;
+            	background-color:#2E2E2E;
+                float: left;
+                margin: 20px;
+            }
+
+            .texto{
+
+            	padding: 10px;
+            }
