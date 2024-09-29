@@ -52,6 +52,7 @@ a:visited {
 form {
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif; /* Fonte padrão para o formulário */
 }
 
 label {
