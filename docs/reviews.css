@@ -6,17 +6,15 @@ body {
 }
 
 .navegacao {
-    font-style: white;
+    color: white;
     background-color: #2E2E2E;
     border: 3px solid black;
-    border-radius: 40px; /* Correção na propriedade border-radius */
+    border-radius: 40px solid black;
     padding: 20px 20px;
     margin: 10px;
     font-size: 20px;
     font-family: 'Press Start 2P', cursive;
     display: flex;
-    justify-content: space-between; /* Itens espaçados */
-    flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
 }
 
 a:link {
@@ -37,45 +35,15 @@ a:hover {
     background-color: #2E2E2E;
     float: left;
     margin: 20px;
-    flex-wrap: wrap; /* Faz o container se ajustar em telas menores */
-    box-sizing: border-box; /* Garante que margens e bordas sejam contadas no tamanho total */
 }
 
 .texto {
     padding: 10px;
 }
 
-/* Responsividade com Media Queries */
-
-/* Para telas menores que 768px (smartphones e tablets) */
-@media only screen and (max-width: 768px) {
-    .navegacao {
-        flex-direction: column; /* Alinha os itens da navegação verticalmente */
-        align-items: center; /* Centraliza os itens */
-        padding: 15px;
-        font-size: 18px; /* Leve ajuste no tamanho da fonte */
-    }
-
+/* Media query for mobile devices */
+@media (max-width: 768px) {
     .conteiner {
-        flex-direction: column; /* Empilha os itens do container verticalmente */
-        width: 100%; /* Garante que o container ocupe toda a largura da tela */
-        margin: 20px 0; /* Margem ajustada para não sobrar espaço nas laterais */
-    }
-
-    .texto {
-        padding: 10px;
-    }
-}
-
-/* Para telas maiores que 768px (desktops) */
-@media only screen and (min-width: 769px) {
-    .navegacao {
-        flex-direction: row; /* Navegação em linha para telas grandes */
-        justify-content: space-between;
-    }
-
-    .conteiner {
-        flex-direction: row; /* Mantém os itens em linha */
-        width: auto; /* Tamanho automático para o container */
+        flex-direction: column; /* Stack elements vertically */
     }
 }
