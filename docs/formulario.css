@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-    color: white;
     background-image: url('fundos/quarto2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,55 +9,38 @@ body {
     padding: 0;
 }
 
-.container {
-    background-color: rgba(46, 46, 46, 0.8);
-    border-radius: 10px;
-}
-
 h1, p {
-    color: white;
+    color: white; 
 }
 
-.form-group {
-    margin-bottom: 15px;
+.container {
+    background-color: rgba(46, 46, 46, 0.8); 
+    border-radius: 10px;
+    padding: 20px;
 }
+
 
 input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    background-color: #333; 
+    color: white; 
     border: 2px solid #A4A4A4;
-    border-radius: 5px;
-    background-color: #333;
-    color: white;
 }
 
 input::placeholder, textarea::placeholder {
-    color: #ccc;
+    color: #ccc; 
 }
 
-textarea {
-    resize: vertical;
+
+.btn-primary {
+    background-color: #007bff; 
+    border: none; 
 }
 
-.required:after {
-    content: "*";
-    color: red;
+.btn-primary:hover {
+    background-color: #0056b3; 
 }
 
 img {
     max-width: 100%;
     height: auto;
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 90%;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 850px;
-    }
 }
