@@ -12,10 +12,10 @@ body{
     border: 4px solid black;
     padding: 10px;
     background-color: #2E2E2E;
-    width: 80%; /* Reduzi para porcentagem para ser responsivo */
-    max-width: 850px; /* Limite máximo para telas maiores */
-    height: auto; /* Deixe a altura se ajustar automaticamente */
-    margin: 60px auto; /* Centralizado */
+    width: 80%;
+    max-width: 850px;
+    height: auto;
+    margin: 60px auto;
 }
 
 /* Navegação */
@@ -26,8 +26,8 @@ body{
     padding: 20px 20px;
     font-size: 20px;
     display: flex;
-    flex-wrap: wrap; /* Para que os itens se ajustem em telas menores */
-    justify-content: center; /* Centralize os itens no centro */
+    flex-wrap: wrap;
+    justify-content: center;
     font-family: 'Press Start 2P', cursive;
 }
 
