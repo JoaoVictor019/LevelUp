@@ -1,0 +1,78 @@
+body{
+
+          color: white;
+          background-image: url(fundos/pokeroom.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+
+         
+         .MEME{
+           
+           margin: 60px 410px;
+           padding: 10px;
+              
+          
+           
+         }
+
+         #ima{
+
+         	 
+             border: 20px solid white; /* Define a borda branca */
+             
+         }
+
+
+         .navegacao{
+             
+             border: 2px solid black;
+             border-radius: 4px solid black;
+             background-color:#2E2E2E;
+             font-style: white;
+             padding: 20px 20px;
+             font-size: 20px;
+             display: flex;
+             font-family: 'Press Start 2P', cursive;
+         }
+
+
+
+          .botao {
+            display: inline-block;
+            background-color: #2E2E2E;
+            color: white;
+            border: 2px solid white;
+            border-radius: 4px;
+            padding: 15px 30px; /* Aumentado para maior tamanho */
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+            float: right; /* Alinha o botão à direita */
+        }
+
+
+
+
+         a:link{
+            color: #5882FA;
+            text-decoration: none;
+         }
+
+         a:hover{
+            
+            color: #A9F5F2;
+            border: 1px skyblue;
+            padding: 3px;
+            
+            
+         }
+
+         a:visited {
+  
+               color: #58ACFA; 
+         
+         }
