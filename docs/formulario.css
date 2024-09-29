@@ -18,6 +18,7 @@ body {
     margin: 60px auto;
     max-width: 90%;
     box-sizing: border-box; /* Garantir que padding e bordas sejam incluídos na largura total */
+    text-align: center; /* Centraliza o conteúdo dentro do container */
 }
 
 .navegacao {
@@ -46,18 +47,20 @@ a:hover {
 }
 
 a:visited {
-    color: #00FF00;
+    color: #58ACFA;
 }
 
 form {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif; /* Fonte padrão para o formulário */
+    align-items: center; /* Centraliza os elementos do formulário */
 }
 
 label {
     margin-top: 10px;
     font-weight: bold;
+    text-align: center; /* Centraliza o texto do rótulo */
 }
 
 input, select, textarea {
@@ -66,6 +69,7 @@ input, select, textarea {
     font-size: 16px;
     max-width: 100%; /* Para garantir que os inputs não ultrapassem o limite da tela */
     box-sizing: border-box;
+    width: 80%; /* Define a largura dos inputs */
 }
 
 .required:after {
