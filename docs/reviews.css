@@ -17,7 +17,7 @@ body {
     font-size: 1.25rem; /* Usando rem para tamanho de fonte */
     font-family: 'Press Start 2P', cursive;
     display: flex;
-    justify-content: space-between; /* Distribui links igualmente */
+    justify-content: center; /* Alinha os itens no centro */
     flex-wrap: wrap; /* Para quebrar a linha em telas menores */
 }
 
@@ -37,15 +37,19 @@ a:hover {
     border: 0.2rem groove black;
     margin-top: 2.5rem;
     display: flex;
+    flex-direction: column; /* Coluna por padrão */
     background-color: #2E2E2E;
     margin: 1.5rem;
-    flex-direction: column; /* Coluna por padrão */
+    max-width: 800px; /* Define uma largura máxima para o contêiner */
+    width: 100%; /* Permite que o contêiner ocupe 100% da largura disponível */
+    padding: 1rem; /* Adiciona padding ao contêiner */
 }
 
 /* Texto */
 .texto {
     padding: 0.625rem;
     font-size: 1rem; /* Tamanho relativo */
+    line-height: 1.5; /* Aumenta a altura da linha para melhor legibilidade */
 }
 
 /* Ajustes para Imagens */
@@ -83,13 +87,17 @@ img {
     /* Manter o layout original no PC */
     .navegacao {
         flex-direction: row; /* Navegação em linha no desktop */
+        justify-content: space-between; /* Espaço igual entre os itens */
     }
 
     .conteiner {
-        flex-direction: row; /* Conteiner lado a lado em desktop */
+        flex-direction: column; /* Mantenha o contêiner em coluna para melhor legibilidade */
+        max-width: 800px; /* Define uma largura máxima para o contêiner */
+        margin: 2rem auto; /* Centraliza o contêiner na tela */
     }
 
     .texto {
         font-size: 1.25rem; /* Tamanho do texto normal em desktop */
+        line-height: 1.5; /* Aumenta a altura da linha para melhor legibilidade */
     }
 }
