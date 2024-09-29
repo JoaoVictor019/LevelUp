@@ -1,55 +1,90 @@
-body{
+body {
+    background-image: url(fundos/resident.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 100%; /* Tamanho base de 16px */
+    padding: 1rem;
+}
 
-            	background-image: url(fundos/resident.jpg);
-            	background-size: cover;
-            	background-repeat: no-repeat;
-    
-            	color: white;
-            }
+/* Navegação */
+.navegacao {
+    font-style: white;
+    background-color: #2E2E2E;
+    border: 0.2rem solid black;
+    border-radius: 2rem;
+    padding: 1.25rem;
+    margin: 1rem;
+    font-size: 1.25rem; /* Usando rem para tamanho de fonte */
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: space-between; /* Distribui links igualmente */
+    flex-wrap: wrap; /* Para quebrar a linha em telas menores */
+}
 
+a:link {
+    text-decoration: none;
+    color: #5882FA;
+}
 
+a:hover {
+    color: #A9F5F2;
+    padding: 0.2rem;
+    margin: 0.1rem;
+}
 
+/* Conteiner */
+.conteiner {
+    border: 0.2rem groove black;
+    margin-top: 2.5rem;
+    display: flex;
+    background-color: #2E2E2E;
+    margin: 1.5rem;
+    flex-direction: column; /* Coluna por padrão */
+}
 
+/* Texto */
+.texto {
+    padding: 0.625rem;
+    font-size: 1rem; /* Tamanho relativo */
+}
 
+/* Media Queries para Responsividade em Mobile */
+@media only screen and (max-width: 768px) {
+    /* Ajustes para Mobile */
+    .navegacao {
+        flex-direction: column; /* Navegação em coluna no mobile */
+        align-items: center;
+        padding: 1rem;
+        font-size: 1rem; /* Reduz tamanho da fonte no mobile */
+    }
 
-             .navegacao{
+    .conteiner {
+        margin: 1rem;
+        padding: 1rem;
+    }
 
-             	font-style: white;
-             	background-color: #2E2E2E;
-             	border: 3px solid black;
-             	border-radius:40px solid black;
-             	padding: 20px 20px;
-                margin: 10px;
-                font-size: 20px;
-                font-family: 'Press Start 2P', cursive;
-                display: flex;
+    .texto {
+        font-size: 0.875rem; /* Texto ajustado para mobile */
+    }
 
-             }
+    body {
+        padding: 0.5rem; /* Espaço ajustado para telas menores */
+    }
+}
 
-             a:link{
-             	text-decoration: none;
-             	color: #5882FA;
-             }
+/* Layout Normal em PC */
+@media only screen and (min-width: 769px) {
+    /* Manter o layout original no PC */
+    .navegacao {
+        flex-direction: row; /* Navegação em linha no desktop */
+    }
 
-             a:hover{
-             	color:#A9F5F2;
-             	padding: 3px;
-             	margin: 2px;
-             }
+    .conteiner {
+        flex-direction: row; /* Conteiner lado a lado em desktop */
+    }
 
-            
-
-            .conteiner{
-
-            	border: groove black;
-            	margin-top: 40px;
-            	display: flex;
-            	background-color:#2E2E2E;
-                float: left;
-                margin: 20px;
-            }
-
-            .texto{
-
-            	padding: 10px;
-            }
+    .texto {
+        font-size: 1.25rem; /* Tamanho do texto normal em desktop */
+    }
+}
