@@ -9,13 +9,14 @@ body {
     font-style: white;
     background-color: #2E2E2E;
     border: 3px solid black;
-    border-radius: 40px; /* Corrigido */
+    border-radius: 40px;
     padding: 20px 20px;
     margin: 10px;
     font-size: 20px;
     font-family: 'Press Start 2P', cursive;
     display: flex;
-    align-items: center; /* Alinha verticalmente */
+    flex-wrap: wrap; /* Adicionado para responsividade */
+    justify-content: center; /* Adicionado para centralizar no pequeno espaço */
 }
 
 a:link {
@@ -33,8 +34,10 @@ a:hover {
     border: groove black;
     margin-top: 40px;
     display: flex;
+    flex-direction: column; /* Mudança para coluna para melhor responsividade */
+    align-items: center; /* Centraliza os itens */
     background-color: #2E2E2E;
-    float: left;
+    float: none; /* Remover float para melhor controle de layout */
     margin: 20px;
 }
 
@@ -42,42 +45,30 @@ a:hover {
     padding: 10px;
 }
 
-/* Imagens Responsivas */
-.imagem-responsiva {
-    max-width: 100%;  /* A imagem não excederá a largura do contêiner */
-    height: auto;     /* Mantém a proporção da imagem */
-    display: block;   /* Remove espaços em branco abaixo da imagem */
-}
-
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
+/* Media Queries para tornar o layout responsivo */
+@media (max-width: 800px) {
     .navegacao {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        font-size: 16px; /* Ajusta o tamanho da fonte */
-        padding: 10px; /* Reduz o preenchimento */
+        font-size: 16px; /* Ajuste do tamanho da fonte para telas menores */
+        padding: 10px;
     }
 
     .conteiner {
-        flex-direction: column; /* Alinha os elementos dentro do contêiner verticalmente */
-        margin: 10px; /* Reduz a margem */
-    }
-
-    body {
-        padding: 10px; /* Adiciona espaço nas bordas do corpo */
+        width: 100%; /* A largura do container ocupará 100% da tela */
+        margin: 0; /* Remove margem lateral para pequenos dispositivos */
     }
 
     .texto {
-        padding: 5px; /* Ajusta o preenchimento para telas menores */
+        padding: 5px; /* Ajuste do padding para telas menores */
+    }
+
+    img {
+        width: 100%; /* A imagem ocupará 100% da largura do seu container */
+        height: auto; /* Mantém a proporção da imagem */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .navegacao {
-        font-size: 14px; /* Ajusta ainda mais o tamanho da fonte */
-        padding: 5px; /* Diminui o preenchimento */
-    }
-
-    .conteiner {
-        margin: 5px; /* Reduz a margem ainda mais em telas pequenas */
+        flex-direction: column; /* Muda a direção para coluna em telas muito pequenas */
     }
 }
