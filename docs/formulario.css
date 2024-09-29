@@ -5,7 +5,7 @@ body {
     background-image: url('fundos/quarto2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Press Start 2P', cursive; 
+     
 }
 
 .conteudoPrincipal {
@@ -65,7 +65,7 @@ input, select, textarea {
 
 .submit-btn {
     display: inline-block; 
-    background-color: #A4A4A4; /* Cor do botão cinza */
+    background-color: #00BFFF; /* Cor do botão azul */
     color: white; /* Texto do botão branco */
     padding: 10px 20px; 
     text-decoration: none; 
