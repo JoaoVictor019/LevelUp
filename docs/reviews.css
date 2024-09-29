@@ -1,19 +1,11 @@
 body{
-
             	background-image: url(fundos/resident.jpg);
             	background-size: cover;
             	background-repeat: no-repeat;
     
             	color: white;
             }
-
-
-
-
-
-
              .navegacao{
-
              	font-style: white;
              	background-color: #2E2E2E;
              	border: 3px solid black;
@@ -23,24 +15,18 @@ body{
                 font-size: 20px;
                 font-family: 'Press Start 2P', cursive;
                 display: flex;
-
              }
-
              a:link{
              	text-decoration: none;
              	color: #5882FA;
              }
-
              a:hover{
              	color:#A9F5F2;
              	padding: 3px;
              	margin: 2px;
              }
-
             
-
             .conteiner{
-
             	border: groove black;
             	margin-top: 40px;
             	display: flex;
@@ -48,8 +34,6 @@ body{
                 float: left;
                 margin: 20px;
             }
-
             .texto{
-
             	padding: 10px;
             }
