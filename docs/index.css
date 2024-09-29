@@ -1,47 +1,39 @@
- body{
+ body {
+    color: white;
+    background-image: url(fundos/th.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
-          color: white;
-          background-image: url(fundos/th.jpg);
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
+.conteudoPrincipal {
+    border: 4px solid black;
+    padding: 10px;
+    background-color: #2E2E2E;
+    width: 850px;
+    height: 500px;
+    margin: 20px auto;
+}
 
+.navegacao {
+    border: 2px solid black;
+    border-radius: 4px solid black;
+    background-color: #2E2E2E;
+    font-style: white;
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+}
 
-         
-         .conteudoPrincipal{
-           
-           border: 4px solid black;
-           padding: 10px;
-           background-color:#2E2E2E ;
-           width: 850px;
-           height: 500px;
-           margin: 60px 270px;
-           
-         }
+a:link {
+    color: #5882FA;
+    text-decoration: none;
+}
 
-
-         .navegacao{
-             
-             border: 2px solid black;
-             border-radius: 4px solid black;
-             background-color:#2E2E2E;
-             font-style: white;
-             padding: 20px 20px;
-             font-size: 20px;
-             display: flex;
-             font-family: 'Press Start 2P', cursive;
-         }
-
-         a:link{
-            color: #5882FA;
-            text-decoration: none;
-         }
-
-         a:hover{
-            
-            color: #A9F5F2;
-            border: 1px skyblue;
-            padding: 3px;
-            
-            
-         }
+a:hover {
+    color: #A9F5F2;
+    border: 1px skyblue;
+    padding: 3px;
+}
