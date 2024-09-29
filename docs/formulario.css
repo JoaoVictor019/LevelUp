@@ -5,127 +5,103 @@ body {
     background-image: url('fundos/quarto2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Press Start 2P', cursive;
-    margin: 0;
-    padding: 0;
+    font-family: 'Press Start 2P', cursive; 
 }
 
-/* Estilos gerais e responsivos */
 .conteudoPrincipal {
-    border: 4px solid black;
-    padding: 10px;
-    background-color: #2E2E2E;
-    margin: 60px auto;
-    max-width: 90%;
-    box-sizing: border-box; /* Garantir que padding e bordas sejam incluídos na largura total */
+    border: 4px solid black; 
+    padding: 10px; 
+    background-color: #2E2E2E; 
+    margin: 60px auto; 
+    max-width: 90%; 
+    width: 100%; /* Adicionado para responsividade */
 }
 
 .navegacao {
-    border: 2px solid black;
-    border-radius: 4px;
-    background-color: #2E2E2E;
-    color: white;
-    padding: 20px;
-    font-size: 20px;
+    border: 2px solid black; 
+    border-radius: 4px; 
+    background-color: #2E2E2E; 
+    color: white; 
+    padding: 20px; 
+    font-size: 20px; 
     display: flex;
-    flex-wrap: wrap; /* Responsividade para navegação */
-    justify-content: space-between;
-    font-family: 'Press Start 2P', cursive;
-    box-sizing: border-box;
+    flex-wrap: wrap; /* Adicionado para permitir quebra de linha */
+    font-family: 'Press Start 2P', cursive; 
 }
 
 a {
-    color: #5882FA;
-    text-decoration: none;
-    margin: 0 5px;
+    color: #5882FA; 
+    text-decoration: none; 
+    margin: 0 5px; 
 }
 
 a:hover {
-    color: #A9F5F2;
+    color: #A9F5F2; 
     padding: 3px;
 }
 
 a:visited {
-    color: #58ACFA;
+    color: #58ACFA; 
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+    display: flex; 
+    flex-direction: column; 
 }
 
 label {
-    margin-top: 10px;
-    font-weight: bold;
+    margin-top: 10px; 
+    font-weight: bold; 
 }
 
 input, select, textarea {
     margin-top: 5px;
-    padding: 8px;
-    font-size: 16px;
-    max-width: 100%; /* Para garantir que os inputs não ultrapassem o limite da tela */
-    box-sizing: border-box;
+    padding: 8px; 
+    font-size: 16px; 
 }
 
 .required:after {
-    content: "*";
-    color: red;
+    content: "*"; 
+    color: red; 
 }
 
 .submit-btn {
-    display: inline-block;
-    background-color: #A4A4A4;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 20px;
-    width: fit-content;
+    display: inline-block; 
+    background-color: #A4A4A4; 
+    color: white; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    text-align: center; 
+    margin-top: 20px; 
 }
 
 .submit-btn:hover {
     background-color: #8A8A8A;
 }
 
-/* Imagens responsivas */
 img {
     max-width: 100%;
-    height: auto;
+    height: auto; 
 }
 
 .conteudoPrincipal img {
-    display: block;
-    margin: 30px auto 0;
+    display: block; 
+    margin: 30px auto 0; 
 }
 
-/* Media queries para dispositivos móveis */
+/* Estilos responsivos */
 @media (max-width: 768px) {
-    body {
-        background-position: center;
+    .navegacao {
+        flex-direction: column; /* Muda para coluna em telas pequenas */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .navegacao a {
+        margin: 10px 0; /* Margem vertical para links em telas pequenas */
     }
 
     .conteudoPrincipal {
-        margin: 20px auto;
-        padding: 15px;
-    }
-
-    .navegacao {
-        flex-direction: column;
-        text-align: center;
-        font-size: 16px; /* Reduzir o tamanho da fonte em dispositivos menores */
-    }
-
-    .navegacao img {
-        margin-top: 10px;
-    }
-
-    input, select, textarea {
-        width: 100%; /* Inputs ocupam toda a largura da tela */
-    }
-
-    .submit-btn {
-        width: 100%; /* Botão de submit ocupa a largura total */
-        padding: 15px 0;
+        margin: 30px 10px; /* Reduzir as margens em telas pequenas */
     }
 }
