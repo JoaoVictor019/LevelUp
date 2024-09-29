@@ -49,6 +49,12 @@ a:hover {
     font-size: 1rem; /* Tamanho relativo */
 }
 
+/* Ajustes para Imagens */
+img {
+    max-width: 100%; /* As imagens não ultrapassam a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
 /* Media Queries para Responsividade em Mobile */
 @media only screen and (max-width: 768px) {
     /* Ajustes para Mobile */
