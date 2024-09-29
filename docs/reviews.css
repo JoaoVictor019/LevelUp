@@ -54,18 +54,19 @@ a:hover {
 
 /* Ajustes para Imagens */
 img {
-    max-width: 80%; /* Ajuste a largura máxima da imagem conforme necessário */
+    max-width: 100%; /* A imagem não ultrapassará a largura do contêiner */
     height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Para evitar espaço em branco abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
 }
-/* Media Queries para Responsividade em Mobile */
-@media only screen and (max-width: 768px) {
-    /* Ajustes para Mobile */
-    .navegacao {
-        flex-direction: column; /* Navegação em coluna no mobile */
-        align-items: center;
-        padding: 1rem;
-        font-size: 1rem; /* Reduz tamanho da fonte no mobile */
+
+/* Media Queries para Ajustar Imagem no PC */
+@media only screen and (min-width: 769px) {
+    img {
+        width: 600px; /* Largura fixa para PCs */
+        height: 600px; /* Altura fixa para PCs */
     }
+}
 
     .conteiner {
         margin: 1rem;
