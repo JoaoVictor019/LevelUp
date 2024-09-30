@@ -1,72 +1,65 @@
-
 body {
     color: white;
     background-image: url(fundos/th.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Press Start 2P', cursive;
 }
 
+/* Navegação */
 .navegacao {
     border: 2px solid black;
     border-radius: 4px;
     background-color: #2E2E2E;
     padding: 20px;
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
+    align-items: center; /* Alinha os itens no centro */
+    justify-content: space-between; /* Distribui espaço entre os itens */
+    flex-wrap: wrap; /* Permite que a navegação quebre em múltiplas linhas se necessário */
+    font-family: 'Press Start 2P', cursive;
 }
 
+/* Links */
 .links {
     display: flex;
-    align-items: center; 
-    flex-wrap: wrap;
+    align-items: center; /* Centraliza os links verticalmente */
 }
 
 a:link, a:visited {
     color: #5882FA;
     text-decoration: none;
-    margin: 0 5px;
+    margin: 0 5px; /* Espaçamento entre os links */
 }
 
 a:hover {
     color: #A9F5F2;
 }
 
+/* Conteúdo principal */
 .conteudoPrincipal {
     border: 4px solid black;
     padding: 10px;
     background-color: #2E2E2E;
-    width: 90%; 
-    max-width: 850px; 
-    height: auto; 
-    margin: 60px auto; 
-    box-sizing: border-box;
-    font-family: 'Press Start 2P', cursive;
+    width: 90%; /* Largura ajustada para ser responsiva */
+    max-width: 850px; /* Tamanho máximo para telas grandes */
+    height: auto; /* Altura ajustada para conteúdo */
+    margin: 60px auto; /* Centraliza o conteúdo */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
 }
 
+/* Media queries para dispositivos móveis */
 @media (max-width: 768px) {
     .navegacao {
-        flex-direction: column; 
-        align-items: flex-start; 
+        flex-direction: row; /* Mantém os itens na linha */
+        justify-content: space-between; /* Alinha os itens com espaço entre eles */
+        overflow-x: auto; /* Permite rolagem horizontal se necessário */
     }
 
     .links {
-        flex-direction: column; 
-        align-items: flex-start; 
-    }
-
-    .links a {
-        margin: 5px 0; 
+        flex-wrap: nowrap; /* Impede que os links quebrem para a próxima linha */
     }
 
     .conteudoPrincipal {
-        margin: 30px 15px; 
-        padding: 15px;
-    }
-    
-    .hidden-sm {
-        display: none; 
+        margin: 30px 15px; /* Ajusta as margens para telas menores */
+        padding: 15px; /* Aumenta o padding em telas menores */
     }
 }
