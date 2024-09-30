@@ -1,6 +1,7 @@
 body {
     background-image: url(fundos/resident.jpg);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     color: white;
     margin: 0;
@@ -42,6 +43,13 @@ a:hover {
 
 .texto {
     padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaços em branco ao redor da imagem */
+    margin: 0 auto; /* Centraliza a imagem se necessário */
 }
 
 /* Estilos para telas maiores (tablets e desktops) */
