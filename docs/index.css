@@ -5,6 +5,7 @@ body {
     background-image: url(fundos/th.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .navegacao {
