@@ -1,10 +1,8 @@
-/* Importação da fonte */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* Estilos globais */
 body {
     color: white;
-    background-image: url(fundos/th.jpg);
+    background-image: url('fundos/th.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Press Start 2P', cursive;
@@ -12,22 +10,41 @@ body {
     padding: 0;
 }
 
-/* Navegação */
+.conteudoPrincipal {
+    border: 4px solid black;
+    padding: 10px;
+    background-color: #2E2E2E;
+    width: 90%; 
+    max-width: 850px; 
+    height: auto; 
+    margin: 60px auto; 
+    box-sizing: border-box; 
+}
+
 .navegacao {
     border: 2px solid black;
     border-radius: 4px;
     background-color: #2E2E2E;
-    padding: 10px;
-    font-size: 16px;
+    padding: 20px;
     display: flex;
-    flex-direction: column; /* Mobile-first: coluna por padrão */
-    align-items: flex-start;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo {
+    flex: 1; 
+}
+
+.navegacao nav {
+    margin-left: 20px; 
+    display: flex; 
+    align-items: center; 
 }
 
 .navegacao a {
     color: #5882FA;
     text-decoration: none;
-    margin: 5px 0; /* Margens menores no mobile */
+    margin: 0 10px; 
 }
 
 .navegacao a:hover {
@@ -39,37 +56,92 @@ body {
     color: #58ACFA;
 }
 
-/* Conteúdo principal */
-.conteudoPrincipal {
-    border: 4px solid black;
-    padding: 15px;
-    background-color: #2E2E2E;
-    width: 90%;
-    max-width: 100%;
-    margin: 30px auto;
-    box-sizing: border-box;
-}
-
-/* Media Queries: Estilos para telas maiores */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .navegacao {
-        flex-direction: row; /* Em telas maiores, a navegação vira uma linha */
-        justify-content: space-between; /* Espaçamento entre os itens */
-        align-items: center; /* Alinhamento centralizado na linha */
-    }
-
-    .navegacao a {
-        margin: 0 10px; /* Margem horizontal entre os links */
+        flex-direction: column; 
+        align-items: flex-start; 
+        font-size: 16px; 
     }
 
     .conteudoPrincipal {
-        max-width: 90%;
-        padding: 20px; /* Aumenta o padding em telas maiores */
+        margin: 30px 15px; 
+        padding: 15px; 
     }
 }
 
-@media (min-width: 992px) {
-    .conteudoPrincipal {
-        max-width: 850px; /* Ajusta o limite máximo de largura para telas grandes */
+h1, p {
+    color: white;
+    line-height: 1.5; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.conteudoPrincipal img {
+    display: block;
+    margin: 30px auto 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%; 
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 80%; 
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #A4A4A4;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ccc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.required:after {
+    content: "*";
+    color: red;
+}
+
+.submit-btn {
+    display: inline-block;
+    background-color: #A4A4A4;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%; 
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #8A8A8A;
+}
+
+@media (max-width: 768px) {
+    .submit-btn {
+        padding: 15px; 
     }
 }
