@@ -43,7 +43,8 @@ a:hover {
     max-width: 850px; 
     height: auto; 
     margin: 60px auto; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
 }
 
 @media (max-width: 768px) {
