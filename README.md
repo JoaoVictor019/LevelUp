@@ -12,5 +12,5 @@ Dicas e insights para enriquecer sua experiência de jogo.
 
 Junte-se a nós nessa jornada! Acompanhe nossas análises e descubra como cada jogo pode se transformar em uma experiência inesquecível.
 
-. Preview do Projeto
+Preview do Projeto
 https://www.figma.com/design/f0lwa0wFZMDs5Edjh4vlBK/Davi-Miguel's-team-library?node-id=0-1&t=wH9NHKBhS2ccKGPF-1
