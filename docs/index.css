@@ -10,7 +10,6 @@ body {
     font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
-    line-height: 2.0;
 }
 
 /* Navegação */
@@ -23,7 +22,6 @@ body {
     display: flex;
     flex-direction: column; /* Mobile-first: coluna por padrão */
     align-items: flex-start;
-    line-height: 2.0;
 }
 
 .navegacao a {
