@@ -1,13 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 body {
     color: white;
-    background-image: url('fundos/th.jpg'); /* Imagem de fundo da página inicial */
+    background-image: url(fundos/th.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Press Start 2P', cursive;
-    margin: 0;
-    padding: 0;
 }
 
 /* Navegação */
@@ -15,73 +10,37 @@ body {
     border: 2px solid black;
     border-radius: 4px;
     background-color: #2E2E2E;
-    padding: 10px;
+    padding: 20px;
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    flex-wrap: wrap; /* Permite que os itens se reorganizem em telas menores */
+    align-items: center; /* Alinha os itens no centro */
+    justify-content: space-between; /* Distribui espaço entre os itens */
+    flex-wrap: wrap; /* Permite que a navegação quebre em múltiplas linhas se necessário */
+    font-family: 'Press Start 2P', cursive;
 }
 
-/* Estilo da logo */
-.logo {
-    flex: 1; /* Ocupa espaço flexível */
+/* Links */
+.links {
+    display: flex;
+    align-items: center; /* Centraliza os links verticalmente */
 }
 
-/* Links de navegação */
-nav {
-    display: flex; /* Usando flexbox para links */
-    align-items: center; /* Alinha os itens verticalmente */
-    margin-left: 20px; /* Ajusta a margem esquerda dos links */
-}
-
-.navegacao a {
+a:link, a:visited {
     color: #5882FA;
     text-decoration: none;
-    margin: 0 10px; /* Margem entre os links */
+    margin: 0 5px; /* Espaçamento entre os links */
 }
 
-.navegacao a:hover {
+a:hover {
     color: #A9F5F2;
-    padding: 3px;
-}
-
-.navegacao a:visited {
-    color: #58ACFA;
 }
 
 /* Conteúdo principal */
 .conteudoPrincipal {
     border: 4px solid black;
-    padding: 20px;
+    padding: 10px;
     background-color: #2E2E2E;
     width: 90%; /* Largura ajustada para ser responsiva */
     max-width: 850px; /* Tamanho máximo para telas grandes */
     height: auto; /* Altura ajustada para conteúdo */
-    margin: 20px auto; /* Centraliza o conteúdo */
-    box-sizing: border-box; /* Inclui padding e bordas na largura total */
-}
-
-/* Estilo dos elementos de texto */
-h1, p {
-    color: white;
-    line-height: 1.5; /* Aumenta o espaçamento entre linhas */
-}
-
-/* Imagens */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Media queries para responsividade em telas menores */
-@media (max-width: 768px) {
-    .navegacao {
-        flex-direction: column; /* Coloca os links em coluna em telas menores */
-        align-items: flex-start; /* Alinha os itens à esquerda */
-        font-size: 16px; /* Reduz o tamanho da fonte */
-    }
-
-    .conteudoPrincipal {
-        margin: 30px 15px; /* Ajusta as margens para telas menores */
-        padding: 15px; /* Aumenta o padding em telas menores */
-    }
-}
+    margin: 60px auto; /* Centraliza o conteúdo */
+    box-sizing: border-box; /* Inclui padding e bordas na 
