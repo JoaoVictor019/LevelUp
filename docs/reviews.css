@@ -1,39 +1,76 @@
-body{
-            	background-image: url(fundos/resident.jpg);
-            	background-size: cover;
-            	background-repeat: no-repeat;
-    
-            	color: white;
-            }
-             .navegacao{
-             	font-style: white;
-             	background-color: #2E2E2E;
-             	border: 3px solid black;
-             	border-radius:40px solid black;
-             	padding: 20px 20px;
-                margin: 10px;
-                font-size: 20px;
-                font-family: 'Press Start 2P', cursive;
-                display: flex;
-             }
-             a:link{
-             	text-decoration: none;
-             	color: #5882FA;
-             }
-             a:hover{
-             	color:#A9F5F2;
-             	padding: 3px;
-             	margin: 2px;
-             }
-            
-            .conteiner{
-            	border: groove black;
-            	margin-top: 40px;
-            	display: flex;
-            	background-color:#2E2E2E;
-                float: left;
-                margin: 20px;
-            }
-            .texto{
-            	padding: 10px;
-            }
+body {
+    background-image: url(fundos/resident.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para dispositivos móveis (Mobile First) */
+.navegacao {
+    background-color: #2E2E2E;
+    border: 3px solid black;
+    border-radius: 20px; /* Ajuste da borda */
+    padding: 10px; /* Reduzi o padding para mobile */
+    margin: 10px;
+    font-size: 16px; /* Font-size reduzido para telas pequenas */
+    font-family: 'Press Start 2P', cursive;
+    display: block; /* Exibindo os itens em bloco em mobile */
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: #5882FA;
+}
+
+a:hover {
+    color: #A9F5F2;
+    padding: 3px;
+    margin: 2px;
+}
+
+.conteiner {
+    border: groove black;
+    margin-top: 20px;
+    display: block; /* Exibindo o container como bloco em telas pequenas */
+    background-color: #2E2E2E;
+    padding: 10px; /* Adicionando padding */
+    margin: 10px;
+}
+
+.texto {
+    padding: 10px;
+}
+
+/* Estilos para telas maiores (tablets e desktops) */
+@media (min-width: 768px) {
+    .navegacao {
+        display: flex; /* Alinhamento flex para telas maiores */
+        justify-content: space-around; /* Espaçamento uniforme entre os itens */
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .conteiner {
+        display: flex; /* Alinhamento flex horizontal */
+        flex-wrap: wrap; /* Quebrar os itens em novas linhas se necessário */
+        justify-content: space-between;
+        margin: 20px;
+    }
+}
+
+/* Estilos para desktops grandes */
+@media (min-width: 1024px) {
+    .navegacao {
+        padding: 30px;
+        margin: 20px;
+        font-size: 22px;
+    }
+
+    .conteiner {
+        margin: 20px auto; /* Centralizando o container */
+        max-width: 1200px; /* Limitando a largura máxima */
+    }
+}
