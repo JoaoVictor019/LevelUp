@@ -20,6 +20,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem em múltiplas linhas */
+}
+
+.navegacao img {
+    max-width: 290px;
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 .navegacao a {
