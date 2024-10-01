@@ -27,11 +27,15 @@ body {
     flex-grow: 1; /* Permite que a seção de links ocupe o espaço disponível */
 }
 
-a:link, a:visited {
+a:link {
     color: #5882FA;
     text-decoration: none;
     margin: 0 5px; /* Espaçamento entre os links */
 }
+
+ a:visited {
+    color: #00FFFF;
+ }
 
 a:hover {
     color: #A9F5F2;
