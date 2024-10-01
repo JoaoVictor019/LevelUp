@@ -50,7 +50,7 @@ a:hover {
 }
 
 #ima {
-    border: 20px solid white; 
+    border: 20px groove gray; 
     width: 85%;
     max-width: 700px; 
     height: auto; 
