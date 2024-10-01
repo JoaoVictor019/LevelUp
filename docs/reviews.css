@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
     background-image: url(fundos/resident.jpg);
     background-size: cover;
@@ -6,51 +8,48 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .navegacao {
-     border: 2px solid black;
+    border: 2px solid black;
     border-radius: 4px;
     background-color: #2E2E2E;
     padding: 20px;
     display: flex;
     align-items: center; 
-    justify-content: space-between; 
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .links {
-    display: flex; /* Flex para links */
+    display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza os links */
-    flex-wrap: wrap; /* Permite quebrar linhas se necessário */
-    flex-grow: 1; /* Permite que a seção de links ocupe o espaço disponível */
+    flex-wrap: wrap; 
 }
 
-a:link {
-    text-decoration: none;
+a:link, a:visited {
     color: #5882FA;
-    margin: 0 5px; /* Espaçamento entre os links */
+    text-decoration: none;
+    margin: 0 5px;
 }
 
 a:hover {
     color: #A9F5F2;
-    padding: 3px;
-    margin: 2px;
 }
 
 .logo {
-    max-width: 200px; /* Ajuste o tamanho da logo conforme necessário */
+    max-width: 200px;
     height: auto;
-    margin-right: 20px; /* Espaçamento à direita da logo */
+    margin-right: 20px;
 }
 
 .conteiner {
     border: groove black;
     margin-top: 20px;
-    display: block; /* Exibindo o container como bloco em telas pequenas */
+    display: block;
     background-color: #2E2E2E;
-    padding: 10px; /* Adicionando padding */
+    padding: 10px;
     margin: 10px;
 }
 
@@ -61,21 +60,46 @@ a:hover {
 img {
     max-width: 100%;
     height: auto;
-    display: block; /* Remove espaços em branco ao redor da imagem */
-    margin: 0 auto; /* Centraliza a imagem se necessário */
+    display: block;
+    margin: 0 auto;
 }
 
-/* Estilos para telas maiores (tablets e desktops) */
-@media (min-width: 768px) {
+/* Mobile first - Estilos para telas menores */
+@media (max-width: 768px) {
     .navegacao {
-        justify-content: space-between; /* Espaçamento uniforme entre os itens */
-        padding: 20px;
-        font-size: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links a {
+        margin: 5px 0;
     }
 
     .conteiner {
-        display: flex; /* Alinhamento flex horizontal */
-        flex-wrap: wrap; /* Quebrar os itens em novas linhas se necessário */
+        margin: 30px 15px;
+        padding: 15px;
+    }
+    
+    .hidden-sm {
+        display: none;
+    }
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 768px) {
+    .navegacao {
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .conteiner {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         margin: 20px;
     }
@@ -85,12 +109,11 @@ img {
 @media (min-width: 1024px) {
     .navegacao {
         padding: 30px;
-        margin: 20px;
         font-size: 22px;
     }
 
     .conteiner {
-        margin: 20px auto; /* Centralizando o container */
-        max-width: 1200px; /* Limitando a largura máxima */
+        margin: 20px auto;
+        max-width: 1200px;
     }
 }
