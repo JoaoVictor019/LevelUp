@@ -20,7 +20,7 @@ body {
     align-items: center; 
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 20px auto; /* Espaçamento ao redor da navegação, incluindo o topo */
+    margin: 8px auto; /* Espaçamento ao redor da navegação, incluindo o topo */
     max-width: 95%; /* Limita a largura da barra de navegação */
 }
 
