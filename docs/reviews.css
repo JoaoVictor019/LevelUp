@@ -20,7 +20,7 @@ body {
     align-items: center; 
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 10px auto; /* Cria o espaçamento ao redor da navegação */
+    margin: 20px auto; /* Espaçamento ao redor da navegação, incluindo o topo */
     max-width: 95%; /* Limita a largura da barra de navegação */
 }
 
@@ -98,7 +98,7 @@ img {
         justify-content: space-between;
         padding: 20px;
         max-width: 90%; /* Ajuste da largura para não ocupar toda a tela */
-        margin: 10px auto; /* Espaçamento nas laterais */
+        margin: 20px auto; /* Espaçamento nas laterais e acima */
     }
 
     .conteiner {
@@ -115,6 +115,7 @@ img {
         padding: 20px;
         font-size: 16px; /* Diminui um pouco o tamanho da fonte */
         max-width: 85%; /* Limita ainda mais a largura em telas grandes */
+        margin: 20px auto; /* Garante o espaçamento superior em telas grandes */
     }
 
     .conteiner {
