@@ -98,7 +98,7 @@ img {
         justify-content: space-between;
         padding: 20px;
         max-width: 90%; /* Ajuste da largura para não ocupar toda a tela */
-        margin: 20px auto; /* Espaçamento nas laterais e acima */
+        margin: 8px auto; /* Espaçamento nas laterais e acima */
     }
 
     .conteiner {
