@@ -9,16 +9,14 @@ body {
 }
 
 .navegacao {
+     border: 2px solid black;
+    border-radius: 4px;
     background-color: #2E2E2E;
-    border: 2px solid black;
-    border-radius: 4px; /* Ajuste da borda */
-    padding: 20px; /* Reduzi o padding para mobile */
-    margin: 10px;
-    font-size: 16px; /* Font-size reduzido para telas pequenas */
-    font-family: 'Press Start 2P', cursive;
-    display: flex; /* Mudado para flex para alinhamento */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    padding: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
 }
 
 .links {
