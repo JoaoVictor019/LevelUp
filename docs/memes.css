@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
     color: white;
     background-image: url(fundos/pokeroom.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Press Start 2P', cursive;
 }
-
 
 .MEME {
     margin: 60px auto; 
     padding: 10px;
 }
-
 
 #ima {
     border: 20px solid white; 
@@ -19,20 +20,32 @@ body {
     height: auto; 
 }
 
-
 .navegacao {
     border: 2px solid black;
     border-radius: 4px;
     background-color: #2E2E2E;
-    color: white; 
-    padding: 20px 10px;
-    font-size: 20px;
+    padding: 20px;
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    font-family: 'Press Start 2P', cursive;
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
 }
 
+.links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+a:link, a:visited {
+    color: #5882FA;
+    text-decoration: none;
+    margin: 0 5px; /* Espaçamento entre os links */
+}
+
+a:hover {
+    color: #A9F5F2;
+}
 
 .botao {
     display: inline-block;
@@ -48,22 +61,16 @@ body {
     float: right;
 }
 
-
-a:link {
-    color: #5882FA;
-    text-decoration: none;
+.conteudoPrincipal {
+    border: 4px solid black;
+    padding: 10px;
+    background-color: #2E2E2E;
+    width: 90%; 
+    max-width: 850px; 
+    height: auto; 
+    margin: 60px auto;
+    box-sizing: border-box; 
 }
-
-a:hover {
-    color: #A9F5F2;
-    border: 1px skyblue;
-    padding: 3px;
-}
-
-a:visited {
-    color: #00FF00;
-}
-
 
 @media (max-width: 768px) {
     .MEME {
@@ -73,6 +80,15 @@ a:visited {
     .navegacao {
         flex-direction: column; 
         align-items: center; 
+    }
+
+    .links {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .links a {
+        margin: 5px 0; /* Ajusta a margem dos links */
     }
 
     .botao {
