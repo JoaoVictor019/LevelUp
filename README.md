@@ -6,10 +6,9 @@ Aqui na LevelUp Reviews, acreditamos que os jogos são mais do que apenas passat
 
 ![videogame-antigo-capa](https://github.com/user-attachments/assets/da068ad3-38d6-48bf-b7b8-fe5776c79be4)
 
-div align="center"
-img src="https://github.com/user-attachments/assets/da068ad3-38d6-48bf-b7b8-fe5776c79be4.png" width="500px" /
-/div
-
+<div align="center">
+<img src="https://github.com/user-attachments/assets/da068ad3-38d6-48bf-b7b8-fe5776c79be4" width="200px" />
+</div>
 🕹️ O que você encontrará aqui:
 
 Análises detalhadas e poéticas que iluminam as nuances de cada jogo.
