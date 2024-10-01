@@ -26,7 +26,7 @@ body {
     flex-wrap: wrap; 
 }
 
-a:link, a:visited {
+a:link{
     color: #5882FA;
     text-decoration: none;
     margin: 0 5px;
@@ -36,8 +36,8 @@ a:hover {
     color: #A9F5F2;
 }
 
-a:hover {
-    color: #A9F5F2;
+a:visited {
+    color: #00FFFF;
 }
 
 .conteudoPrincipal {
