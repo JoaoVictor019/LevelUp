@@ -4,6 +4,8 @@
 Nós somos um espaço inovador dedicado a análises de jogos, onde cada crítica é apresentada com um toque poético e uma pitada de humor!
 Aqui na LevelUp Reviews, acreditamos que os jogos são mais do que apenas passatempos; eles são experiências que merecem ser exploradas em sua totalidade. Nosso objetivo é oferecer uma perspectiva única e multifacetada do universo dos jogos, ajudando tanto jogadores novatos quanto veteranos a mergulharem mais fundo em suas aventuras virtuais.
 
+![videogame-antigo-capa](https://github.com/user-attachments/assets/da068ad3-38d6-48bf-b7b8-fe5776c79be4)
+
 🕹️ O que você encontrará aqui:
 
 Análises detalhadas e poéticas que iluminam as nuances de cada jogo.
