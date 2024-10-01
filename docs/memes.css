@@ -45,6 +45,7 @@ a:hover {
 .MEME {
     margin: 60px auto; 
     padding: 10px;
+    display:flex;
 }
 
 #ima {
