@@ -18,29 +18,29 @@ body {
     padding: 10px;
     font-size: 16px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Mantém o espaço entre os itens */
     align-items: center;
     flex-wrap: wrap; /* Permite que os itens quebrem em múltiplas linhas */
 }
 
 .navegacao img {
-    max-width: 290px;
+    max-width: 290px; /* Ajusta o tamanho da imagem da logo */
     height: auto; /* Mantém a proporção da imagem */
 }
 
 .navegacao a {
-    color: #5882FA;
-    text-decoration: none;
-    margin: 0 10px;
+    color: #5882FA; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    margin: 0 10px; /* Margem entre os links */
 }
 
 .navegacao a:hover {
-    color: #A9F5F2;
-    padding: 3px;
+    color: #A9F5F2; /* Cor do link ao passar o mouse */
+    padding: 3px; /* Espaçamento ao passar o mouse */
 }
 
 .navegacao a:visited {
-    color: #58ACFA;
+    color: #58ACFA; /* Cor do link já visitado */
 }
 
 .conteudoPrincipal {
@@ -54,18 +54,18 @@ body {
 
 @media (min-width: 768px) {
     .conteudoPrincipal {
-        max-width: 90%;
+        max-width: 90%; /* Define largura máxima */
     }
 }
 
 @media (min-width: 992px) {
     .conteudoPrincipal {
-        max-width: 850px;
+        max-width: 850px; /* Define largura máxima em telas maiores */
     }
 }
 
 h1, p {
-    color: white;
+    color: white; /* Cor do texto */
 }
 
 form {
@@ -75,63 +75,63 @@ form {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Espaço abaixo de cada grupo de formulário */
     width: 100%; /* Para que as caixas ocupem toda a largura disponível */
 }
 
 label {
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: bold; /* Destaca o texto do label */
+    margin-bottom: 5px; /* Espaço abaixo do label */
 }
 
 input, select, textarea {
     width: 80%; /* Ajusta a largura dos inputs para 80% */
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #A4A4A4;
-    border-radius: 5px;
-    background-color: #333;
-    color: white;
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 2px solid #A4A4A4; /* Borda dos inputs */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #333; /* Cor de fundo */
+    color: white; /* Cor do texto */
 }
 
 input::placeholder, textarea::placeholder {
-    color: #ccc;
+    color: #ccc; /* Cor do texto de placeholder */
 }
 
 textarea {
-    resize: vertical;
+    resize: vertical; /* Permite redimensionar verticalmente */
 }
 
 .required:after {
-    content: "*";
-    color: red;
+    content: "*"; /* Adiciona um asterisco para campos obrigatórios */
+    color: red; /* Cor do asterisco */
 }
 
 .submit-btn {
-    display: inline-block;
-    background-color: #A4A4A4;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
+    display: inline-block; /* Mostra o botão inline */
+    background-color: #A4A4A4; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 12px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
     width: 80%; /* Botão ocupa 80% da largura */
-    margin-top: 20px;
-    cursor: pointer;
+    margin-top: 20px; /* Espaçamento acima do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
 }
 
 .submit-btn:hover {
-    background-color: #8A8A8A;
+    background-color: #8A8A8A; /* Cor do botão ao passar o mouse */
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Imagens não ultrapassam a largura do contêiner */
+    height: auto; /* Mantém a proporção */
 }
 
 .conteudoPrincipal img {
-    display: block;
-    margin: 30px auto 0;
+    display: block; /* Exibe a imagem como bloco */
+    margin: 30px auto 0; /* Centraliza a imagem */
 }
 
 /* Media queries para responsividade em telas menores */
