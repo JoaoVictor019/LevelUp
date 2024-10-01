@@ -17,19 +17,35 @@ body {
     margin: 10px;
     font-size: 16px; /* Font-size reduzido para telas pequenas */
     font-family: 'Press Start 2P', cursive;
-    display: block; /* Exibindo os itens em bloco em mobile */
-    text-align: center;
+    display: flex; /* Mudado para flex para alinhamento */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.links {
+    display: flex; /* Flex para links */
+    align-items: center;
+    justify-content: center; /* Centraliza os links */
+    flex-wrap: wrap; /* Permite quebrar linhas se necessário */
+    flex-grow: 1; /* Permite que a seção de links ocupe o espaço disponível */
 }
 
 a:link {
     text-decoration: none;
     color: #5882FA;
+    margin: 0 5px; /* Espaçamento entre os links */
 }
 
 a:hover {
     color: #A9F5F2;
     padding: 3px;
     margin: 2px;
+}
+
+.logo {
+    max-width: 200px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+    margin-right: 20px; /* Espaçamento à direita da logo */
 }
 
 .conteiner {
@@ -55,8 +71,7 @@ img {
 /* Estilos para telas maiores (tablets e desktops) */
 @media (min-width: 768px) {
     .navegacao {
-        display: flex; /* Alinhamento flex para telas maiores */
-        justify-content: space-around; /* Espaçamento uniforme entre os itens */
+        justify-content: space-between; /* Espaçamento uniforme entre os itens */
         padding: 20px;
         font-size: 20px;
     }
