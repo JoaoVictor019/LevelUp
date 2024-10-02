@@ -28,7 +28,7 @@ body {
     flex-wrap: wrap; 
 }
 
-a:link, a:visited {
+a:link{
     color: #5882FA;
     text-decoration: none;
     margin: 0 5px;
