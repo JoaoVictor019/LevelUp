@@ -38,6 +38,10 @@ a:hover {
     color: #A9F5F2;
 }
 
+a:visited {
+    color: #00FFFF;
+}
+
 .logo {
     max-width: 200px;
     height: auto;
