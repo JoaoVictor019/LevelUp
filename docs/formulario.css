@@ -28,19 +28,18 @@ body {
     height: auto; /* Mantém a proporção da imagem */
 }
 
-.navegacao a {
-    color: #5882FA; /* Cor dos links */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    margin: 0 10px; /* Margem entre os links */
+a:link{
+    color: #5882FA;
+    text-decoration: none;
+    margin: 0 5px;
 }
 
-.navegacao a:hover {
-    color: #A9F5F2; /* Cor do link ao passar o mouse */
-    padding: 3px; /* Espaçamento ao passar o mouse */
+a:hover {
+    color: #A9F5F2;
 }
 
-.navegacao a:visited {
-    color:  #00FFFF; /* Cor do link já visitado */
+a:visited {
+    color: #00FFFF;
 }
 
 
