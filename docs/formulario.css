@@ -40,8 +40,11 @@ body {
 }
 
 .navegacao a:visited {
-    color: #58ACFA; /* Cor do link já visitado */
+    color:  #00FFFF; /* Cor do link já visitado */
 }
+
+
+
 
 .conteudoPrincipal {
     background-color: #2E2E2E; 
