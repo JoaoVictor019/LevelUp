@@ -53,7 +53,7 @@ if (nextReviewButton) { // Verifica se o botão existe
 const reviews = [
     {
         title: "Resident Evil 7",
-        url: "resident_evil_7.html" // Substitua pelo nome do arquivo correto
+        url: "reviews.html" // Substitua pelo nome do arquivo correto
     },
     {
         title: "Outro Jogo",
