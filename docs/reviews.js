@@ -45,3 +45,37 @@ const nextReviewButton = document.querySelector('a[href="review2.html"]'); // Se
 if (nextReviewButton) { // Verifica se o botão existe
     nextReviewButton.addEventListener('click', animateNextReview); // Adiciona o evento de clique
 }
+
+
+// reviews.js
+
+// Estrutura de dados com os reviews
+const reviews = [
+    {
+        title: "Resident Evil 7",
+        url: "resident_evil_7.html" // Substitua pelo nome do arquivo correto
+    },
+    {
+        title: "Outro Jogo",
+        url: "outro_jogo.html" // Exemplo de outro review
+    },
+    // Adicione mais reviews aqui
+];
+
+// Função para filtrar e exibir os resultados da busca
+function filterReviews() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const resultsContainer = document.getElementById('resultsContainer'); // Container para os resultados
+    resultsContainer.innerHTML = ""; // Limpa resultados anteriores
+
+    // Filtra os reviews com base na entrada do usuário
+    const filteredReviews = reviews.filter(review => review.title.toLowerCase().includes(filter));
+
+    // Exibe os resultados filtrados
+    filteredReviews.forEach(review => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<a href="${review.url}">${review.title}</a>`; // Cria um link para o review
+        resultsContainer.appendChild(listItem); // Adiciona o item à lista
+    });
+}
