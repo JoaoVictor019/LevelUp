@@ -53,6 +53,27 @@ a:visited {
     box-sizing: border-box;
 }
 
+/* Efeito de Fade In */
+.fade-in {
+    opacity: 0; /* Começa invisível */
+    transition: opacity 1s ease-in; /* Transição suave */
+}
+
+.fade-in.visible {
+    opacity: 1; /* Torna visível */
+}
+
+/* Efeito de Pulsar em Títulos */
+.pulse {
+    animation: pulse 1.5s infinite; /* Chama a animação pulse */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
 @media (max-width: 768px) {
     .navegacao {
         flex-direction: column;
