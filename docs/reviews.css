@@ -81,18 +81,18 @@ img {
 }
 
 /* Estiliza os itens da lista */
-#resultsContainer li {
+.resultsContainer li {
     list-style-type: none; /* Remove a bolinha da lista */
     padding: 5px; /* Espaçamento interno */
 }
 
 /* Estiliza os links dentro da lista */
-#resultsContainer li a {
+.resultsContainer li a {
     color: #5882FA; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado */
 }
 
-#resultsContainer li a:hover {
+.resultsContainer li a:hover {
     color: #A9F5F2; /* Cor do texto ao passar o mouse */
 }
 
