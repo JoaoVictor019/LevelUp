@@ -70,44 +70,6 @@ img {
 
 
 
-.search-container {
-    display: flex; /* Flex para alinhar o input e o botão */
-    align-items: center; /* Alinha verticalmente */
-    margin: 20px; /* Espaço ao redor da barra de pesquisa */
-    display: flex;
-    flex-direction: column; /* Coloca os elementos em coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    margin: 20px 0; /* Margem em cima e embaixo */
-}
-
-#resultsContainer {
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo levemente transparente */
-    border: 2px solid black; /* Borda preta */
-    border-radius: 8px; /* Bordas arredondadas */
-    margin-top: 10px; /* Espaçamento acima */
-    padding: 10px; /* Espaçamento interno */
-    width: 300px; /* Largura da caixa */
-    max-height: 200px; /* Altura máxima */
-    overflow-y: auto; /* Rolagem vertical se necessário */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
-}
-
-/* Estiliza os itens da lista */
-.resultsContainer li {
-    list-style-type: none; /* Remove a bolinha da lista */
-    padding: 5px; /* Espaçamento interno */
-}
-
-/* Estiliza os links dentro da lista */
-.resultsContainer li a {
-    color: #5882FA; /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado */
-}
-
-.resultsContainer li a:hover {
-    color: #A9F5F2; /* Cor do texto ao passar o mouse */
-}
-
 
 /* Mobile first - Estilos para telas menores */
 @media (max-width: 768px) {
@@ -120,6 +82,56 @@ img {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    
+/* Estilo para a barra de pesquisa */
+.search-container {
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 20px; /* Margem em volta da barra */
+}
+
+.search-input {
+    padding: 10px; /* Espaçamento interno */
+    width: 300px; /* Largura da barra de pesquisa */
+    border: 2px solid black; /* Borda preta */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+/* Estilo para a caixa de resultados */
+#resultsContainer {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo levemente transparente */
+    border: 2px solid black; /* Borda preta */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-top: 10px; /* Espaçamento acima */
+    padding: 10px; /* Espaçamento interno */
+    width: 300px; /* Largura da caixa */
+    max-height: 200px; /* Altura máxima */
+    overflow-y: auto; /* Rolagem vertical se necessário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+/* Estiliza os itens da lista dentro da caixa de resultados */
+#resultsContainer ul {
+    list-style-type: none; /* Remove a bolinha da lista */
+    padding: 0; /* Remove o padding padrão */
+}
+
+/* Estiliza os itens da lista */
+#resultsContainer li {
+    padding: 5px; /* Espaçamento interno */
+}
+
+/* Estiliza os links dentro da lista */
+#resultsContainer li a {
+    color: #5882FA; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+#resultsContainer li a:hover {
+    color: #A9F5F2; /* Cor do texto ao passar o mouse */
+}
 
     .links a {
         margin: 5px 0;
