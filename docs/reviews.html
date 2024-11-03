@@ -22,9 +22,17 @@
         <img src="fundos/poke.gif" width="50" height="50" alt="Gif de pokemon emerald">
     </div>
 
+    <!-- Barra de Pesquisa -->
+    <div style="text-align: center; margin: 20px;">
+        <input type="text" id="searchInput" placeholder="Buscar review..." oninput="filterReviews()">
+    </div>
+
+    <!-- Container para exibir os resultados da pesquisa -->
+    <ul id="resultsContainer" style="list-style-type: none; padding: 0; text-align: center;"></ul>
+
     <div class="conteiner">
         <img src="fundos/residentevil.jpg" width="600" height="600" alt="Capa do jogo">
-        <div class="texto">
+        <div class="texto" id="reviewContent">
             Lançado em 24 de janeiro de 2017, Biohazard 7, ou como ficou conhecido aqui no Brasil, Resident Evil 7, conta a história de Ethan Winters, que, após o sumiço de sua esposa Mia, parte em busca de sua amada, munido de absolutamente nada, apenas com a falta de bom senso.<br>
             Sua busca o leva a uma mansão agrícola aparentemente abandonada, mas que, na verdade, é habitada pelos Bakers, uma família aparentemente normal, mas que parece ter sido infectada por algum tipo de fungo humanóide chamado no jogo de "Mofo", tornando-se seres agressivos, violentos e, se me permite acrescentar, nojentos.<br>
             Resident Evil 7 foi o primeiro jogo da franquia a apresentar jogabilidade em primeira pessoa, o que contribui MUITO para o clima tenso do início do jogo, onde jogadores desavisados irão se assustar com o mínimo ranger de portas ou o som dos passos de Ethan. O que também ajuda nesse clima tenso é justamente a ambientação e a visceralidade apresentada no cenário. Por exemplo, durante o jogo, podemos interagir com alguns objetos no cenário, e não é incomum encontrar carnes e pedaços de animais pela mansão dos Bakers, o que reforça o estado mental instável dos Bakers, que são os principais antagonistas do jogo. Outro ponto positivo para esse clima é que, diferente dos outros jogos onde começamos com uma pistola, aqui Ethan não leva armas inicialmente, mas podemos encontrá-las mais à frente no decorrer do jogo.<br>
@@ -37,7 +45,8 @@
     <div style="display: flex; justify-content: space-between; padding: 10px; float: right;">
         <a href="review2.html" style="border:4px solid black; border-radius: 10px; background-color:#585858; padding: 10px 20px; color:#A9F5F2; font-size:15px; font-family: 'Press Start 2P', cursive;">Próximo review</a>
     </div>
- <!-- Inclui o JavaScript externo -->
+
+    <!-- Inclui o JavaScript externo -->
     <script src="reviews.js"></script>
 </body>
 </html>
