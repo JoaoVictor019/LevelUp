@@ -68,6 +68,18 @@ img {
     margin: 0 auto;
 }
 
+
+
+.search-container {
+    display: flex; /* Flex para alinhar o input e o botão */
+    align-items: center; /* Alinha verticalmente */
+    margin: 20px; /* Espaço ao redor da barra de pesquisa */
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin: 20px 0; /* Margem em cima e embaixo */
+}
+
 #resultsContainer {
     background-color: rgba(255, 255, 255, 0.8); /* Fundo levemente transparente */
     border: 2px solid black; /* Borda preta */
