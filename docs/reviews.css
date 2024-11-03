@@ -68,38 +68,44 @@ img {
     margin: 0 auto;
 }
 
-/* Estilos para a barra de pesquisa */
 .search-container {
-    display: flex; /* Flex para alinhar o input e o botão */
-    align-items: center; /* Alinha verticalmente */
-    margin: 20px; /* Espaço ao redor da barra de pesquisa */
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin: 20px 0; /* Margem em cima e embaixo */
 }
 
-#searchInput {
+.search-input {
+    width: 300px; /* Ajuste a largura conforme necessário */
     padding: 10px; /* Espaço interno */
-    font-size: 16px; /* Tamanho da fonte */
-    border: 2px solid #A9F5F2; /* Borda da barra de pesquisa */
-    border-radius: 5px; /* Bordas arredondadas */
-    width: 350px; /* Largura da barra de pesquisa */
-    background-color: #2E2E2E; /* Cor de fundo da barra de pesquisa */
+    border: 2px solid black; /* Borda */
+    border-radius: 4px; /* Cantos arredondados */
+    background-color: #2E2E2E; /* Cor de fundo */
     color: white; /* Cor do texto */
+    font-family: 'Press Start 2P', cursive; /* Fonte */
 }
 
-#searchButton {
-    padding: 10px 15px; /* Espaço interno do botão */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    background-color: #A9F5F2; /* Cor de fundo do botão */
-    color: #2E2E2E; /* Cor do texto do botão */
-    cursor: pointer; /* Cursor em forma de pointer ao passar o mouse */
-    margin-left: 10px; /* Espaço à esquerda do botão */
+.search-input::placeholder {
+    color: #A9F5F2; /* Cor do texto do placeholder */
 }
 
-/* Efeito ao passar o mouse sobre o botão */
-#searchButton:hover {
-    background-color: #8eeeee; /* Cor mais clara ao passar o mouse */
+.results-box {
+    margin-top: 10px; /* Espaço entre a barra de pesquisa e a caixa de resultados */
+    border: 2px solid black; /* Borda */
+    border-radius: 4px; /* Cantos arredondados */
+    background-color: #2E2E2E; /* Cor de fundo */
+    max-width: 300px; /* Largura máxima da caixa */
+    width: 100%; /* Largura 100% do contêiner pai */
+    display: none; /* Inicialmente escondido */
 }
+
+.results-box ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 10px; /* Espaço interno */
+    margin: 0; /* Remove margem */
+    color: white; /* Cor do texto dos resultados */
+}
+
 
 /* Mobile first - Estilos para telas menores */
 @media (max-width: 768px) {
