@@ -68,6 +68,39 @@ img {
     margin: 0 auto;
 }
 
+/* Estilos para a barra de pesquisa */
+.search-container {
+    display: flex; /* Flex para alinhar o input e o botão */
+    align-items: center; /* Alinha verticalmente */
+    margin: 20px; /* Espaço ao redor da barra de pesquisa */
+}
+
+#searchInput {
+    padding: 10px; /* Espaço interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 2px solid #A9F5F2; /* Borda da barra de pesquisa */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: 350px; /* Largura da barra de pesquisa */
+    background-color: #2E2E2E; /* Cor de fundo da barra de pesquisa */
+    color: white; /* Cor do texto */
+}
+
+#searchButton {
+    padding: 10px 15px; /* Espaço interno do botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #A9F5F2; /* Cor de fundo do botão */
+    color: #2E2E2E; /* Cor do texto do botão */
+    cursor: pointer; /* Cursor em forma de pointer ao passar o mouse */
+    margin-left: 10px; /* Espaço à esquerda do botão */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+#searchButton:hover {
+    background-color: #8eeeee; /* Cor mais clara ao passar o mouse */
+}
+
 /* Mobile first - Estilos para telas menores */
 @media (max-width: 768px) {
     .navegacao {
