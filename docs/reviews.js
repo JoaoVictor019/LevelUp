@@ -66,25 +66,21 @@ const reviews = [
 function filterReviews() {
     const input = document.getElementById('searchInput');
     const filter = input.value.toLowerCase();
-    const resultsContainer = document.getElementById('resultsContainer');
-    const ul = resultsContainer.querySelector('ul');
-    
-    // Limpa resultados anteriores
-    ul.innerHTML = '';
+    const resultsContainer = document.getElementById('resultsContainer'); // Container para os resultados
+    resultsContainer.innerHTML = ""; // Limpa resultados anteriores
 
-    if (filter) {
-        // Exemplo: Você deve adicionar sua lógica para filtrar os reviews
-        const filteredReviews = reviews.filter(review => review.toLowerCase().includes(filter)); // Substitua `reviews` pela sua lista de reviews
+    // Filtra os reviews com base na entrada do usuário
+    const filteredReviews = reviews.filter(review => review.title.toLowerCase().includes(filter));
 
+    // Verifica se há resultados filtrados
+    if (filteredReviews.length > 0) {
         filteredReviews.forEach(review => {
-            const li = document.createElement('li');
-            li.textContent = review; // Adicione a lógica para exibir o resultado
-            ul.appendChild(li);
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<a href="${reviews.url}">${reviews.title}</a>`; // Cria um link para o review
+            resultsContainer.appendChild(listItem); // Adiciona o item à lista
         });
-
-        // Mostra a caixa de resultados se houver resultados
-        resultsContainer.style.display = filteredReviews.length > 0 ? 'block' : 'none';
     } else {
-        resultsContainer.style.display = 'none'; // Esconde a caixa se a barra de pesquisa estiver vazia
+        // Se não houver resultados, mostra uma mensagem
+        resultsContainer.innerHTML = "<li>Nenhum resultado encontrado.</li>";
     }
 }
