@@ -1,3 +1,4 @@
+
 // Função para aplicar animação de fade-in
 function fadeIn(element, duration) {
     element.style.opacity = 0; // Começa com o elemento invisível (opacidade 0)
@@ -72,15 +73,10 @@ function filterReviews() {
     // Filtra os reviews com base na entrada do usuário
     const filteredReviews = reviews.filter(review => review.title.toLowerCase().includes(filter));
 
-    // Verifica se há resultados filtrados
-    if (filteredReviews.length > 0) {
-        filteredReviews.forEach(review => {
-            const listItem = document.createElement('li');
-            listItem.innerHTML = `<a href="${reviews.url}">${reviews.title}</a>`; // Cria um link para o review
-            resultsContainer.appendChild(listItem); // Adiciona o item à lista
-        });
-    } else {
-        // Se não houver resultados, mostra uma mensagem
-        resultsContainer.innerHTML = "<li>Nenhum resultado encontrado.</li>";
-    }
+    // Exibe os resultados filtrados
+    filteredReviews.forEach(review => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<a href="${review.url}">${review.title}</a>`; // Cria um link para o review
+        resultsContainer.appendChild(listItem); // Adiciona o item à lista
+    });
 }
