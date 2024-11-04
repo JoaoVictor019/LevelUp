@@ -22,14 +22,13 @@
         <img src="fundos/poke.gif" width="50" height="50" alt="Gif de pokemon emerald">
     </div>
 
-    <div id="search-container">
-        <input type="text" class="searchInput" placeholder="Buscar review..." oninput="filterReviews()" class="search-input">
-        <div class="resultsContainer" style="display: none;">
-            <ul>
-                <!-- Os resultados serão inseridos aqui pelo JavaScript -->
-            </ul>
-        </div>
+    <!-- Barra de Pesquisa -->
+    <div style="text-align: center; margin: 20px;">
+        <input type="text" id="searchInput" placeholder="Buscar review..." oninput="filterReviews()">
     </div>
+
+    <!-- Container para exibir os resultados da pesquisa -->
+    <ul id="resultsContainer" style="list-style-type: none; padding: 0; text-align: center;"></ul>
 
     <div class="conteiner">
         <img src="fundos/residentevil.jpg" width="600" height="600" alt="Capa do jogo">
