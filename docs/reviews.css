@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
@@ -11,7 +12,7 @@ body {
 }
 
 .navegacao {
-    border: 2px solid black;
+     border: 2px solid black;
     border-radius: 4px;
     background-color: #2E2E2E;
     padding: 20px;
@@ -28,7 +29,7 @@ body {
     flex-wrap: wrap; 
 }
 
-a:link {
+a:link{
     color: #5882FA;
     text-decoration: none;
     margin: 0 5px;
@@ -106,13 +107,61 @@ img {
     color: white; /* Cor do texto dos resultados */
 }
 
+
 /* Mobile first - Estilos para telas menores */
-@media (max-width: 600px) {
-    .search-input {
-        width: 100%; /* Largura total em telas menores */
+@media (max-width: 768px) {
+    .navegacao {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    #resultsContainer {
-        width: 90%; /* Largura ajustada para o container de resultados */
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links a {
+        margin: 5px 0;
+    }
+
+    .conteiner {
+        margin: 30px 15px;
+        padding: 15px;
+    }
+    
+    .hidden-sm {
+        display: none;
+    }
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 768px) {
+    .navegacao {
+        justify-content: space-between;
+        padding: 20px;
+        max-width: 95%;
+        margin: 10px auto; /* Ajusta a margem superior */
+    }
+
+    .conteiner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px;
+    }
+}
+
+/* Estilos para desktops grandes */
+@media (min-width: 1024px) {
+    .navegacao {
+        padding: 20px;
+        font-size: 16px;
+        max-width: 100%; 
+        margin: 10px auto; /* Mantém o espaçamento mais sutil em telas grandes */
+    }
+
+    .conteiner {
+        margin: 20px auto;
+        max-width: 1200px;
     }
 }
