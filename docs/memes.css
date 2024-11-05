@@ -23,41 +23,43 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap; 
-    justify-content: center; 
-    flex-grow: 1; 
+    justify-content: center;
+    flex-grow: 1;
 }
 
 a:link {
     color: #5882FA;
     text-decoration: none;
-    margin: 0 5px; 
+    margin: 0 5px;
 }
 
- a:visited {
+a:visited {
     color: #00FFFF;
- }
+}
 
 a:hover {
     color: #A9F5F2;
 }
 
 .logo {
-    max-width: 290px; 
+    max-width: 290px;
     height: auto;
 }
 
 .MEME {
-    margin: 60px auto; 
+    margin: 60px auto;
     padding: 10px;
-    display:flex;
-    margin:10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebrar em coluna nas telas menores */
 }
 
 .ima {
-    border: 20px groove gray; 
+    border: 20px groove gray;
     width: 85%;
-    max-width: 700px; 
-    height: auto; 
+    max-width: 700px;
+    height: auto;
 }
 
 .botao {
@@ -66,7 +68,7 @@ a:hover {
     color: white;
     border: 2px solid white;
     border-radius: 4px;
-    padding: 15px 30px; 
+    padding: 15px 30px;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     margin-top: 20px;
@@ -74,15 +76,16 @@ a:hover {
     float: right;
 }
 
+/* Ajustes para telas menores */
 @media (max-width: 768px) {
     .navegacao {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
     }
 
     .links {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
     }
 
     .links a {
@@ -90,21 +93,27 @@ a:hover {
     }
 
     .MEME {
-        margin: 20px 10px; 
+        margin: 20px 10px;
+        flex-direction: column; /* Alinha as imagens em coluna */
+    }
+
+    .ima {
+        width: 100%; /* Imagens ocupam toda a largura disponível */
+        max-width: 100%;
     }
 
     .botao {
         float: none;
-        margin: 20px auto; 
+        margin: 20px auto;
     }
 }
 
 @media (max-width: 480px) {
     .navegacao {
-        font-size: 18px; 
+        font-size: 18px;
     }
 
     .botao {
-        padding: 10px 20px; 
+        padding: 10px 20px;
     }
 }
