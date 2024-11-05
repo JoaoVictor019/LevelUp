@@ -1,15 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-body {
-    background-image: url(fundos/resident.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
+
 
 .navegacao {
      border: 2px solid black;
