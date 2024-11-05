@@ -23,14 +23,14 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap; 
-    justify-content: center; /* Centraliza os links */
-    flex-grow: 1; /* Permite que a seção de links ocupe o espaço disponível */
+    justify-content: center; 
+    flex-grow: 1; 
 }
 
 a:link {
     color: #5882FA;
     text-decoration: none;
-    margin: 0 5px; /* Espaçamento entre os links */
+    margin: 0 5px; 
 }
 
  a:visited {
@@ -42,7 +42,7 @@ a:hover {
 }
 
 .logo {
-    max-width: 290px; /* Ajuste o tamanho da logo conforme necessário */
+    max-width: 290px; 
     height: auto;
 }
 
@@ -86,7 +86,7 @@ a:hover {
     }
 
     .links a {
-        margin: 5px 0; /* Ajusta a margem dos links */
+        margin: 5px 0;
     }
 
     .MEME {
