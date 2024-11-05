@@ -57,8 +57,8 @@ const reviews = [
         url: "reviews.html" // Substitua pelo nome do arquivo correto
     },
     {
-        title: "Outro Jogo",
-        url: "outro_jogo.html" // Exemplo de outro review
+        title: " Need for Speed Underground 2",
+        url: "Need underground 2.html" // Exemplo de outro review
     },
     // Adicione mais reviews aqui
 ];
