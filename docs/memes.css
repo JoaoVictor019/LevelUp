@@ -52,7 +52,7 @@ a:hover {
     display: flex;
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap; /* Permite quebrar em coluna nas telas menores */
+    flex-wrap: wrap;
 }
 
 .ima {
@@ -94,14 +94,14 @@ a:hover {
 
     .MEME {
         margin: 20px auto;
-        flex-direction: column; /* Alinha as imagens em coluna */
-        align-items: center; /* Centraliza o contêiner de imagens */
-        width: 100%; /* Garante que .MEME ocupa largura total */
+        flex-direction: column;
+        align-items: center;
     }
 
     .ima {
-        width: 90%; /* Imagens ocupam quase toda a largura disponível */
-        max-width: 500px; /* Limita o tamanho das imagens em telas menores */
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto; /* Centraliza as imagens com espaçamento igual */
     }
 
     .botao {
