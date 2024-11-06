@@ -1,59 +1,47 @@
-// script.js
-
-// Espera que o DOM esteja completamente carregado
-document.addEventListener('DOMContentLoaded', () => {
-    // Seleciona o título e os parágrafos
-    const titulo = document.querySelector('h1');
-    const parrafos = document.querySelectorAll('.conteudoPrincipal p');
-    
-    // Adiciona a classe 'pulse' ao título após um pequeno atraso
-    setTimeout(() => {
-        titulo.classList.add('pulse'); // Adiciona efeito de pulsar ao título
-    }, 500);
-
-    // Adiciona a classe 'visible' aos parágrafos com atraso escalonado
-    parrafos.forEach((paragrafo, index) => {
-        setTimeout(() => {
-            paragrafo.classList.add('fade-in', 'visible'); // Aplica o efeito fade-in
-        }, 500 + index * 500); // Atraso crescente para cada parágrafo
-    });
-});
-
-
-// index.js
+// Navegação assíncrona entre páginas
 document.addEventListener("DOMContentLoaded", () => {
     // Seleciona todos os links de navegação
     const links = document.querySelectorAll(".navegacao nav a");
 
-    // Adiciona um evento de clique em cada link para evitar o carregamento completo
+    // Adiciona evento para carregamento assíncrono
     links.forEach(link => {
         link.addEventListener("click", (e) => {
-            e.preventDefault(); // Impede o comportamento padrão de redirecionamento
-
-            // Obtém a URL do link clicado
-            const url = link.getAttribute("href");
-
-            // Chama a função de carregar o conteúdo da página
-            carregarPagina(url);
+            e.preventDefault(); // Impede o redirecionamento padrão
+            const url = link.getAttribute("href"); // Obtém a URL do link clicado
+            carregarPagina(url); // Chama função para carregar a nova página
         });
     });
 });
 
 async function carregarPagina(url) {
     try {
-        // Busca o conteúdo da página de forma assíncrona
-        const response = await fetch(url);
-
-        // Verifica se a resposta foi bem-sucedida
+        const response = await fetch(url); // Busca conteúdo da página
         if (!response.ok) throw new Error("Erro ao carregar a página.");
+        
+        const conteudo = await response.text(); // Converte conteúdo para texto
+        document.querySelector(".conteudoPrincipal").innerHTML = conteudo; // Insere conteúdo na div
 
-        // Lê o conteúdo HTML da página
-        const conteudo = await response.text();
-
-        // Insere o conteúdo na div principal
-        document.querySelector(".conteudoPrincipal").innerHTML = conteudo;
+        aplicarEfeitos(); // Aplica animações nos elementos carregados
     } catch (erro) {
         console.error("Erro:", erro);
         document.querySelector(".conteudoPrincipal").innerHTML = "<p>Erro ao carregar o conteúdo.</p>";
     }
+}
+
+// Função para aplicar efeitos
+function aplicarEfeitos() {
+    const titulo = document.querySelector("h1");
+    const parrafos = document.querySelectorAll(".conteudoPrincipal p");
+
+    // Adiciona efeito de pulsar ao título
+    setTimeout(() => {
+        titulo?.classList.add('pulse'); // Adiciona classe ao título se existir
+    }, 500);
+
+    // Adiciona efeito de fade-in nos parágrafos com atraso escalonado
+    parrafos.forEach((paragrafo, index) => {
+        setTimeout(() => {
+            paragrafo.classList.add('fade-in', 'visible');
+        }, 500 + index * 500); // Atraso crescente para cada parágrafo
+    });
 }
