@@ -60,6 +60,10 @@ const reviews = [
         title: " Need for Speed Underground 2",
         url: "Need underground 2.html" // Exemplo de outro review
     },
+       {
+        title: " Need for Speed Underground 2",
+        url: "Subnautica.html" // Exemplo de outro review
+    },
     // Adicione mais reviews aqui
 ];
 
