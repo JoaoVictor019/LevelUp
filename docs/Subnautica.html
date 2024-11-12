@@ -20,54 +20,27 @@
     }
 
 
-                /* Estilo para a barra de pesquisa */
-        #barra {
-            text-align: center;
-            margin: 20px;
-            background-color:#2E2E2E;
-        }
+    /* Estilo básico */
+    .Conteiner {
+        margin-top: 20px; /* Margem inicial para o espaçamento */
+        transition: margin-top 0.3s ease; /* Transição suave para a mudança de posição */
+    }
 
-        /* Estilo para o campo de entrada */
-        #searchInput {
-            width: 50%; /* Largura da barra de pesquisa */
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            outline: none;
-            transition: box-shadow 0.3s;
-            
-        }
+    /* Estilo para o contêiner de resultados */
+    #resultsContainer {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        margin-top: 10px;
+    }
 
-        /* Sombra ao focar no campo de pesquisa */
-        #searchInput:focus {
-            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-            border-color: #007bff;
-        }
-
-        /* Estilo para o contêiner de resultados */
-        #resultsContainer {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-            margin-top: 10px;
-            background-color:#2E2E2E;
-        }
-
-        /* Estilo para cada item de resultado */
-        #resultsContainer li {
-            padding: 10px;
-            margin: 5px 0;
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        /* Mudança de cor ao passar o mouse */
-        #resultsContainer li:hover {
-            background-color: #e2e6ea;
-        }
+    #resultsContainer li {
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px;
+    }
 
 
    </style>
@@ -89,12 +62,12 @@
     </div>
 
     <!-- Barra de Pesquisa -->
-    <div style="text-align: center; margin: 20px;" id="barra">
-        <input type="text" id="searchInput" placeholder="Buscar review..." oninput="filterReviews()">
+    <div style="text-align: center; margin: 20px;" class="class="Container"">
+        <input type="text"  id="resultsContainer" placeholder="Buscar review..." oninput="filterReviews()">
     </div>
 
     <!-- Container para exibir os resultados da pesquisa -->
-    <ul id="resultsContainer" style="list-style-type: none; padding: 0; text-align: center;"></ul>
+    <ul id="resultsContainer li" style="list-style-type: none; padding: 0; text-align: center;"></ul>
 
     <div class="conteiner">
         <img src="fundos/subnau.jpg" width="600" height="600" alt="Capa do jogo">
