@@ -61,43 +61,6 @@ img {
     margin: 0 auto;
 }
 
-.search-container {
-    display: flex;
-    flex-direction: column; /* Coloca os elementos em coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    margin: 20px 0; /* Margem em cima e embaixo */
-}
-
-.search-input {
-    width: 300px; /* Ajuste a largura conforme necessário */
-    padding: 10px; /* Espaço interno */
-    border: 2px solid black; /* Borda */
-    border-radius: 4px; /* Cantos arredondados */
-    background-color: #2E2E2E; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    font-family: 'Press Start 2P', cursive; /* Fonte */
-}
-
-.search-input::placeholder {
-    color: #A9F5F2; /* Cor do texto do placeholder */
-}
-
-.results-box {
-    margin-top: 10px; /* Espaço entre a barra de pesquisa e a caixa de resultados */
-    border: 2px solid black; /* Borda */
-    border-radius: 4px; /* Cantos arredondados */
-    background-color: #2E2E2E; /* Cor de fundo */
-    max-width: 300px; /* Largura máxima da caixa */
-    width: 100%; /* Largura 100% do contêiner pai */
-    display: none; /* Inicialmente escondido */
-}
-
-.results-box ul {
-    list-style-type: none; /* Remove marcadores da lista */
-    padding: 10px; /* Espaço interno */
-    margin: 0; /* Remove margem */
-    color: white; /* Cor do texto dos resultados */
-}
 
 
 /* Mobile first - Estilos para telas menores */
@@ -156,4 +119,68 @@ img {
         margin: 20px auto;
         max-width: 1200px;
     }
+}
+
+
+
+/* Estilo para a barra de pesquisa */
+.barra {
+    text-align: center;
+    margin: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    border: 2px solid #2E2E2E;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: 'Press Start 2P', cursive;
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #585858;
+    outline: none;
+}
+
+/* Estilo para o container de resultados da pesquisa */
+#resultsContainer {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resultsContainer li {
+    background-color: #333;
+    color: #A9F5F2;
+    border: 1px solid #585858;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#resultsContainer li a {
+    color: #A9F5F2;
+    text-decoration: none;
+}
+
+#resultsContainer li:hover {
+    background-color: #585858;
+}
+
+/* Estilo para o contêiner de conteúdo abaixo da barra de pesquisa */
+.conteiner {
+    margin-top: 20px;
+    transition: margin-top 0.3s ease;
 }
