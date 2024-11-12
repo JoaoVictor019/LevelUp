@@ -18,31 +18,67 @@
     margin: 0;
     padding: 0;
     }
+/* Estilo para a barra de pesquisa */
+.barra {
+    text-align: center;
+    margin: 20px;
+}
 
+#searchInput {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    border: 2px solid #2E2E2E;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: 'Press Start 2P', cursive;
+    transition: all 0.3s ease;
+}
 
-    /* Estilo básico */
-    .Conteiner {
-        margin-top: 20px; /* Margem inicial para o espaçamento */
-        transition: margin-top 0.3s ease; /* Transição suave para a mudança de posição */
-       
-    }
+#searchInput:focus {
+    border-color: #585858;
+    outline: none;
+}
 
-    /* Estilo para o contêiner de resultados */
-    #resultsContainer {
-        list-style-type: none;
-        padding: 0;
-        text-align: center;
-        margin-top: 10px;
-    }
+/* Estilo para o container de resultados da pesquisa */
+#resultsContainer {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    #resultsContainer li {
-        padding: 10px;
-        background-color: #f8f9fa;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        margin: 5px;
-    }
+#resultsContainer li {
+    background-color: #333;
+    color: #A9F5F2;
+    border: 1px solid #585858;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
 
+#resultsContainer li a {
+    color: #A9F5F2;
+    text-decoration: none;
+}
+
+#resultsContainer li:hover {
+    background-color: #585858;
+}
+
+/* Estilo para o contêiner de conteúdo abaixo da barra de pesquisa */
+.conteiner {
+    margin-top: 20px;
+    transition: margin-top 0.3s ease;
+}
 
    </style>
     
@@ -62,13 +98,13 @@
         <img src="fundos/poke.gif" width="50" height="50" alt="Gif de pokemon emerald">
     </div>
 
-    <!-- Barra de Pesquisa -->
-    <div style="text-align: center; margin: 20px;" class="class="Container"">
-        <input type="text"  id="resultsContainer" placeholder="Buscar review..." oninput="filterReviews()">
-    </div>
+  <!-- Barra de Pesquisa -->
+<div class="barra">
+    <input type="text" id="searchInput" placeholder="Buscar review..." oninput="filterReviews()">
+</div>
 
-    <!-- Container para exibir os resultados da pesquisa -->
-    <ul id="resultsContainer li" style="list-style-type: none; padding: 0; text-align: center;"></ul>
+<!-- Container para exibir os resultados da pesquisa -->
+<ul id="resultsContainer" style="list-style-type: none; padding: 0; text-align: center;"></ul>
 
     <div class="conteiner">
         
