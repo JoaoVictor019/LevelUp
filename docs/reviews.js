@@ -52,26 +52,19 @@ if (nextReviewButton) { // Verifica se o botão existe
 
 // Estrutura de dados com os reviews
 const reviews = [
-    {
-        title: "Resident Evil 7",
-        url: "reviews.html" // Substitua pelo nome do arquivo correto
-    },
-    {
-        title: " Need for Speed Underground 2",
-        url: "Need underground 2.html" // Exemplo de outro review
-    },
-       {
-        title: "Subnautica",
-        url: "Subnautica.html" // Exemplo de outro review
-    },
-    // Adicione mais reviews aqui
+    { title: "Resident Evil 7", url: "reviews.html" },
+    { title: "Need for Speed Underground 2", url: "Need underground 2.html" },
+    { title: "Subnautica", url: "Subnautica.html" }
+    // Add mais reviews aqui
 ];
 
 // Função para filtrar e exibir os resultados da busca
 function filterReviews() {
     const input = document.getElementById('searchInput');
     const filter = input.value.toLowerCase();
-    const resultsContainer = document.getElementById('resultsContainer'); // Container para os resultados
+    const resultsContainer = document.getElementById('resultsContainer');
+    const conteiner = document.querySelector('.conteiner'); // Seleciona o contêiner abaixo da barra
+
     resultsContainer.innerHTML = ""; // Limpa resultados anteriores
 
     // Filtra os reviews com base na entrada do usuário
@@ -80,7 +73,10 @@ function filterReviews() {
     // Exibe os resultados filtrados
     filteredReviews.forEach(review => {
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<a href="${review.url}">${review.title}</a>`; // Cria um link para o review
-        resultsContainer.appendChild(listItem); // Adiciona o item à lista
+        listItem.innerHTML = `<a href="${review.url}">${review.title}</a>`;
+        resultsContainer.appendChild(listItem);
     });
+
+    // Atualiza a margem superior do contêiner abaixo
+    conteiner.style.marginTop = `${resultsContainer.offsetHeight + 20}px`;
 }
