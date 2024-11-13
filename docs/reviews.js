@@ -54,9 +54,8 @@ if (nextReviewButton) { // Verifica se o botão existe
 const reviews = [
     { title: "Resident Evil 7", url: "reviews.html" },
     { title: "Need for Speed Underground 2", url: "Need underground 2.html" },
-    { title: "Subnautica", url: "Subnautica.html" }
-    GTA San Andreas.html
- { title: "GTA san Andreas", url: "GTA San Andreas.html" }
+    { title: "Subnautica", url: "Subnautica.html" },
+    { title: "GTA san Andreas", url: "GTA San Andreas.html"}
     // Add mais reviews aqui
 ];
 
