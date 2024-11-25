@@ -29,7 +29,7 @@ João Paulo da Silva Júnior
 João Victor Romagnóli Vendito 
 202402531425
 
-Natan 
+Natan Henrique ribeiro lobo 
 202402531221
 
 Preview do Projeto
