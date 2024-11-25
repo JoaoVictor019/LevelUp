@@ -20,7 +20,7 @@ Integrantes do grupo do grupo:
 Davi Miguel da Rocha Lima 
 202402530951
 
-Miguel Henrique feliciano de Lima 
+Miguel Henrique Feliciano de Lima 
 202403593726
 
 João Paulo da Silva Júnior
@@ -29,7 +29,7 @@ João Paulo da Silva Júnior
 João Victor Romagnóli Vendito 
 202402531425
 
-Natan Henrique ribeiro lobo 
+Natan Henrique Ribeiro lobo 
 202402531221
 
 Preview do Projeto
