@@ -15,5 +15,22 @@ Dicas e insights para enriquecer sua experiência de jogo.
 
 Junte-se a nós nessa jornada! Acompanhe nossas análises e descubra como cada jogo pode se transformar em uma experiência inesquecível.
 
+Integrantes do grupo do grupo:
+
+Davi Miguel da Rocha Lima 
+202402530951
+
+Miguel Henrique feliciano de Lima 
+202403593726
+
+João Paulo da Silva Júnior
+202402531409
+
+João Victor Romagnóli Vendito 
+202402531425
+
+Natan 
+202402531221
+
 Preview do Projeto
 https://www.figma.com/design/f0lwa0wFZMDs5Edjh4vlBK/Davi-Miguel's-team-library?node-id=0-1&t=wH9NHKBhS2ccKGPF-1
