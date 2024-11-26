@@ -11,16 +11,18 @@
 
 <body>
     <div class="navegacao">
+       
+        
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">    
-            <img src="fundos/Logo_LevelUp_atualizada.png" class="img-fluid" style="max-width: 290px; height: auto;" alt="Logo do site">     
-            <a href="index.html" class="text-dark mx-2">Home</a>
-            <b>|</b>
-            <a href="reviews.html" class="text-dark mx-2">Reviews</a>
-            <b>|</b>
-            <a href="memes.html" class="text-dark mx-2">MEMES</a>
-            <b>|</b>
-            <a href="tierlist.html" class="text-dark mx-2">Tier List</a>
-            <img src="fundos/poke.gif" class="img-fluid" style="max-width: 50px; height: auto;" alt="Gif de pokemon emerald">
+        <img src="fundos/Logo_LevelUp_atualizada.png" class="img-fluid" style="max-width: 290px; height: auto;" alt="Logo do site">     
+                <a href="index.html" class="text-dark mx-2">Home</a>
+                <b>|</b>
+                <a href="reviews.html" class="text-dark mx-2">Reviews</a>
+                <b>|</b>
+                <a href="memes.html" class="text-dark mx-2">MEMES</a>
+                <b>|</b>
+                <a href="tierlist.html" class="text-dark mx-2">Tier List</a>
+                 <img src="fundos/poke.gif" class="img-fluid" style="max-width: 50px; height: auto;" alt="Gif de pokemon emerald">
         </div>
     </div>
 
@@ -28,7 +30,7 @@
         <h1 class="text-center mb-4">Bem-vindo(a) à página de formulário</h1>
         <p class="text-center mb-4">Ajude-nos a entender melhor seus gostos e os do nosso público! Preencha o formulário abaixo:</p>
 
-        <form action="http://localhost:4000/usuarios" method="POST" class="w-100 mx-auto" style="max-width: 500px;">
+        <form action="https://webhook.site/959ecacc-8edf-4c95-a359-6e3a3ed6afba" method="post" class="w-100 mx-auto" style="max-width: 500px;">
             <div class="form-group">
                 <label for="nome" class="required">Seu nome ou nick:</label>
                 <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome ou nick" required>
@@ -39,6 +41,55 @@
                 <select id="como-conheceu" name="como_conheceu" class="form-control" required>
                     <option value="">Selecione</option>
                     <option value="Indicação de um amigo">Indicação de um amigo</option>
-                    <option value="Vi uma publicidade
+                    <option value="Vi uma publicidade">Vi uma publicidade</option>
+                    <option value="Achei sem querer querendo">Achei sem querer querendo</option>
+                </select>
+            </div>
 
+            <div class="form-group">
+                <label for="conteudo" class="required">Está gostando do conteúdo?</label>
+                <select id="conteudo" name="conteudo" class="form-control" required>
+                    <option value="">Selecione</option>
+                    <option value="Sim, o conteúdo é bem legal">Sim, o conteúdo é bem legal</option>
+                    <option value="Mais ou menos, tenho ressalvas">Mais ou menos, tenho ressalvas</option>
+                    <option value="Não estou gostando">Não estou gostando</option>
+                </select>
+            </div>
 
+            <div class="form-group">
+                <label for="sugestao" class="required">Sugestão de jogo:</label>
+                <input type="text" id="sugestao" name="sugestao" class="form-control" placeholder="Digite sua sugestão de jogo">
+            </div>
+
+            <div class="form-group">
+                <label for="classificacao" class="required">Qual nota você daria para esse jogo?</label>
+                <select id="classificacao" name="classificacao" class="form-control" required>
+                    <option value="">Selecione</option>
+                    <option value="1">1 Estrela</option>
+                    <option value="2">2 Estrelas</option>
+                    <option value="3">3 Estrelas</option>
+                    <option value="4">4 Estrelas</option>
+                    <option value="5">5 Estrelas</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="genero" class="required">A que gênero pertence o jogo? (FPS, terror etc.):</label>
+                <input type="text" id="genero" name="genero" class="form-control" placeholder="Digite o gênero do jogo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="resumo" class="required">Pode nos dar um breve resumo do jogo que você escolheu?</label>
+                <textarea id="resumo" name="resumo" rows="4" class="form-control" placeholder="Digite o resumo do jogo" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar formulário</button>
+        </form>
+
+        <div class="text-center mt-4">
+            <img src="fundos/jolteon.gif" class="img-fluid" style="max-width: 110px;" alt="Um pequeno pokemon raposa amarelo">
+        </div>
+    </div>
+</body>
+
+</html>
