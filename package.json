@@ -1,0 +1,20 @@
+{
+  "name": "levelup",
+  "version": "1.0.0",
+  "description": "Nós somos um espaço inovador dedicado a análises de jogos, onde cada crítica é apresentada com um toque poético e uma pitada de humor! Aqui na LevelUp Reviews, acreditamos que os jogos são mais do que apenas passatempos; eles são experiências que merecem ser exploradas em sua totalidade. Nosso objetivo é oferecer uma perspectiva única e multifacetada do universo dos jogos, ajudando tanto jogadores novatos quanto veteranos a mergulharem mais fundo em suas aventuras virtuais.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "sqlite3": "^5.1.7"
+  }
+}
