@@ -1,12 +1,9 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
-const path = require('path');
 const app = express();
 const port = 4000;
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); // Para lidar com formulários
-app.use(express.static(path.join(__dirname))); // Certifique-se de que os arquivos estáticos estão sendo servidos
 
 // Conexão com o banco de dados SQLite
 const db = new sqlite3.Database('./database.db', (err) => {
@@ -30,7 +27,7 @@ app.get('/', (req, res) => {
   res.send('Olá, LevelUp Reviews!');
 });
 
-// Endpoint para adicionar usuários (Create) com redirecionamento para a página de agradecimento
+// Endpoint para adicionar usuários (Create)
 app.post('/usuarios', (req, res) => {
   const { nome, email } = req.body;
   const sql = `INSERT INTO usuarios (nome, email) VALUES (?, ?)`;
@@ -38,7 +35,7 @@ app.post('/usuarios', (req, res) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
-    res.redirect('/agradecimento.html');
+    res.json({ id: this.lastID });
   });
 });
 
