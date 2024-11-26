@@ -1,5 +1,3 @@
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,55 +8,56 @@
     <link rel="stylesheet" href="reviews.css">
 
     <style>
-    body{
-    background-image: url('front-end/docs/fundos/Fundo.darksouls.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    margin: 0;
-    padding: 0;
+    body {
+        background-image: url('fundos/Fundo.darksouls.png'); /* Ajuste para a pasta fundos */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        margin: 0;
+        padding: 0;
     }
-   </style>
+    </style>
 </head>
 <body>
 
     <div class="navegacao">
-        <img src="fundos/Nova_Logo.png" class="img-fluid" alt="Nova Logo" style="max-width: 290px; height: auto;">
+        <img src="fundos/Logo_LevelUp_atualizada.png" class="img-fluid" alt="Nova Logo" style="max-width: 290px; height: auto;">
             <a href="formulários.html">Formulário</a>
             <b>|</b>
             <a href="index.html">Home</a>
             <b>|</b>
             <a href="memes.html">MEMES</a>
             <b>|</b>
-            <a href="tierlist.html"> Tier List</a>
+            <a href="tierlist.html">Tier List</a>
         
         <img src="fundos/novo_poke.gif" width="50" height="50" alt="Novo Gif de pokemon">
     </div>
- <!-- Barra de Pesquisa -->
-<div class="barra">
-    <input type="text" id="searchInput" placeholder="Buscar review..." oninput="filterReviews()">
-</div>
+    
+    <!-- Barra de Pesquisa -->
+    <div class="barra">
+        <input type="text" id="searchInput" placeholder="Buscar review..." oninput="filterReviews()">
+    </div>
 
-<!-- Container para exibir os resultados da pesquisa -->
-<ul id="resultsContainer" style="list-style-type: none; padding: 0; text-align: center;"></ul>
+    <!-- Container para exibir os resultados da pesquisa -->
+    <ul id="resultsContainer" style="list-style-type: none; padding: 0; text-align: center;"></ul>
 
     <div class="conteiner">
-        <img src="front-end/docs/fundos/Darksouls2.jpg" width="600" height="600" alt="Nova Capa do jogo">
+        <img src="fundos/Darksouls2.jpg" width="600" height="600" alt="Nova Capa do jogo"> <!-- Imagem corrigida -->
         <div class="texto" id="reviewContent">
-       Se você está pensando em jogar Dark Souls 2, parabéns, você é masoquista de primeira linha. O jogo começa com um "Bem-vindo à sua morte", mas na verdade, é mais como "Bem-vindo a um ciclo interminável de frustração, desgosto e vontade de quebrar o controle". Esse jogo pega sua alma, arrasta ela pelo chão, amassa, joga no fogo e depois te faz perguntar: "O que eu fiz de errado na vida?"
+            Se você está pensando em jogar Dark Souls 2, parabéns, você é masoquista de primeira linha. O jogo começa com um "Bem-vindo à sua morte", mas na verdade, é mais como "Bem-vindo a um ciclo interminável de frustração, desgosto e vontade de quebrar o controle". Esse jogo pega sua alma, arrasta ela pelo chão, amassa, joga no fogo e depois te faz perguntar: "O que eu fiz de errado na vida?"
 
-O cenário é bonito, com um toque sombrio, e você vai visitar lugares que parecem incríveis... até perceber que esses lugares estão infestados de monstros que querem te matar de maneiras criativas (e sempre cruéis). Ah, e quando você pensa que está avançando na história, o jogo te puxa de volta como se fosse um tio maluco dizendo: "não, não, você não vai embora tão cedo".
+            O cenário é bonito, com um toque sombrio, e você vai visitar lugares que parecem incríveis... até perceber que esses lugares estão infestados de monstros que querem te matar de maneiras criativas (e sempre cruéis). Ah, e quando você pensa que está avançando na história, o jogo te puxa de volta como se fosse um tio maluco dizendo: "não, não, você não vai embora tão cedo".
 
-A jogabilidade? Bem, ela é como um filme de terror: você sabe que vai ser assustador, mas ainda assim decide ir até o fim. A mecânica de combate te ensina a arte do "morrer com elegância". Se você não morre pelo ataque de um inimigo, pode ter certeza de que será engolido por uma parede invisível ou cairá em um abismo profundo que você não sabia que existia.
+            A jogabilidade? Bem, ela é como um filme de terror: você sabe que vai ser assustador, mas ainda assim decide ir até o fim. A mecânica de combate te ensina a arte do "morrer com elegância". Se você não morre pelo ataque de um inimigo, pode ter certeza de que será engolido por uma parede invisível ou cairá em um abismo profundo que você não sabia que existia.
 
-Os chefes? Ah, os chefes. Eles são como os chefes em uma reunião de trabalho: você tenta, tenta, tenta e, no final, ele simplesmente te destrói porque você esqueceu de uma palavra mágica ou fez a jogada errada. Mas não se preocupe! Dark Souls 2 tem uma mecânica chamada “retry até seu cérebro der defeito”. Afinal, o que são 150 mortes se você finalmente consegue derrotar o chefe que matou sua paciência?
+            Os chefes? Ah, os chefes. Eles são como os chefes em uma reunião de trabalho: você tenta, tenta, tenta e, no final, ele simplesmente te destrói porque você esqueceu de uma palavra mágica ou fez a jogada errada. Mas não se preocupe! Dark Souls 2 tem uma mecânica chamada “retry até seu cérebro der defeito”. Afinal, o que são 150 mortes se você finalmente consegue derrotar o chefe que matou sua paciência?
 
-E a história? Ah, ela está lá, tipo um enigma que você vai tentar entender enquanto grita de frustração. Se você não entender nada sobre o enredo, tudo bem, porque Dark Souls 2 vai fazer com que você se esqueça até do seu próprio nome enquanto tenta sobreviver aos corredores cheios de esqueletos e armadilhas.
+            E a história? Ah, ela está lá, tipo um enigma que você vai tentar entender enquanto grita de frustração. Se você não entender nada sobre o enredo, tudo bem, porque Dark Souls 2 vai fazer com que você se esqueça até do seu próprio nome enquanto tenta sobreviver aos corredores cheios de esqueletos e armadilhas.
 
-No fim das contas, Dark Souls 2 é aquele jogo que você odeia enquanto joga, mas depois de um tempo, começa a ter um certo carinho por ele, como se fosse um relacionamento abusivo. Você sempre sabe que vai sofrer, mas algo dentro de você ainda quer voltar para mais um round de tortura.
+            No fim das contas, Dark Souls 2 é aquele jogo que você odeia enquanto joga, mas depois de um tempo, começa a ter um certo carinho por ele, como se fosse um relacionamento abusivo. Você sempre sabe que vai sofrer, mas algo dentro de você ainda quer voltar para mais um round de tortura.
 
-Então, se você tem paciência, coragem, e talvez algumas reservas de tranquilizantes, Dark Souls 2 pode ser a experiência que você nunca imaginou que gostaria, mas que de alguma forma, você não consegue parar de jogar.
+            Então, se você tem paciência, coragem, e talvez algumas reservas de tranquilizantes, Dark Souls 2 pode ser a experiência que você nunca imaginou que gostaria, mas que de alguma forma, você não consegue parar de jogar.
         </div>
     </div>
 
@@ -70,6 +69,3 @@ Então, se você tem paciência, coragem, e talvez algumas reservas de tranquili
     <script src="reviews.js"></script>
 </body>
 </html>
-```
-
-Você pode colocar o novo texto principal na seção indicada por `<!-- Coloque o novo texto principal aqui -->`. Se precisar de mais alguma alteração ou ajuda, é só me avisar! 😊
