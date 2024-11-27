@@ -15,6 +15,8 @@ Dicas e insights para enriquecer sua experiência de jogo.
 
 Junte-se a nós nessa jornada! Acompanhe nossas análises e descubra como cada jogo pode se transformar em uma experiência inesquecível.
 
+Passo a passo de como executar o site: Frontend: Como é um conteúdo estático, pode baixar o código e rodar normalmente na sua máquina. Backend: Um servidor em php, então baixe os arquivos e rode ele via xampp, ou qualquer outro método para rodar o servidor, que vai liberar as portas para você usar, assim atualizando a tabela criada no servidor php e o arquivo json é tabela users.db.
+
 Integrantes do grupo do grupo:
 
 Davi Miguel da Rocha Lima 
