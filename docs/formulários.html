@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <title>Formulário</title>
     <meta charset="UTF-8">
@@ -8,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="formulario.css">
 </head>
-
 <body>
     <div class="navegacao">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">    
@@ -28,7 +26,7 @@
         <h1 class="text-center mb-4">Bem-vindo(a) à página de formulário</h1>
         <p class="text-center mb-4">Ajude-nos a entender melhor seus gostos e os do nosso público! Preencha o formulário abaixo:</p>
 
-        <form action="http://localhost:4000/usuarios" method="POST" class="w-100 mx-auto" style="max-width: 500px;">
+        <form id="formUsuario" class="w-100 mx-auto" style="max-width: 500px;">
             <div class="form-group">
                 <label for="nome" class="required">Seu nome ou nick:</label>
                 <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome ou nick" required>
@@ -84,10 +82,54 @@
             <button type="submit" class="submit-btn">Enviar formulário</button>
         </form>
 
+        <div id="mensagem" class="text-center mt-4"></div>
         <div class="text-center mt-4">
             <img src="fundos/jolteon.gif" class="img-fluid" style="max-width: 110px;" alt="Um pequeno pokemon raposa amarelo">
         </div>
     </div>
-</body>
 
+    <script>
+        document.getElementById('formUsuario').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Impede o envio do formulário padrão
+
+            const nome = document.getElementById('nome').value;
+            const como_conheceu = document.getElementById('como-conheceu').value;
+            const conteudo = document.getElementById('conteudo').value;
+            const sugestao = document.getElementById('sugestao').value;
+            const classificacao = document.getElementById('classificacao').value;
+            const genero = document.getElementById('genero').value;
+            const resumo = document.getElementById('resumo').value;
+
+            const dados = {
+                nome,
+                como_conheceu,
+                conteudo,
+                sugestao,
+                classificacao,
+                genero,
+                resumo
+            };
+
+            try {
+                const response = await fetch('/usuarios', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dados)
+                });
+
+                if (response.ok) {
+                    // Redireciona para a página de agradecimento
+                    window.location.href = '/agradecimento.html';
+                } else {
+                    document.getElementById('mensagem').innerText = 'Erro ao enviar dados.';
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                document.getElementById('mensagem').innerText = 'Erro ao enviar dados.';
+            }
+        });
+    </script>
+</body>
 </html>
