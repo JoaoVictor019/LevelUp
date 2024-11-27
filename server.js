@@ -31,6 +31,7 @@ const db = new sqlite3.Database('./database.db', (err) => {
   db.run(`CREATE TABLE IF NOT EXISTS usuarios (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT NOT NULL,
+    email TEXT NOT NULL,
     como_conheceu TEXT,
     conteudo TEXT,
     sugestao TEXT,
@@ -52,8 +53,8 @@ const db = new sqlite3.Database('./database.db', (err) => {
 
 // Adicionar um usuário manualmente
 db.serialize(() => {
-  const sql = `INSERT INTO usuarios (nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo) VALUES (?, ?, ?, ?, ?, ?, ?)`;
-  db.run(sql, ['João', 'Indicação de um amigo', 'Sim, o conteúdo é bem legal', 'N/A', '5 Estrelas', 'Aventura', 'Jogo excelente'], function(err) {
+  const sql = `INSERT INTO usuarios (nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
+  db.run(sql, ['João', 'jpsilva.cg@gmail.com', 'Indicação de um amigo', 'Sim, o conteúdo é bem legal', 'N/A', '5 Estrelas', 'Aventura', 'Jogo excelente'], function(err) {
     if (err) {
       return console.error(err.message);
     }
@@ -69,9 +70,9 @@ app.get('/', (req, res) => {
 // Endpoint para adicionar usuários (Create) com redirecionamento para a página de agradecimento
 app.post('/usuarios', (req, res) => {
   console.log("Dados recebidos:", req.body); // Logging dos dados recebidos
-  const { nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo } = req.body;
-  const sql = `INSERT INTO usuarios (nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo) VALUES (?, ?, ?, ?, ?, ?, ?)`;
-  db.run(sql, [nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo], function(err) {
+  const { nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo } = req.body;
+  const sql = `INSERT INTO usuarios (nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
+  db.run(sql, [nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo], function(err) {
     if (err) {
       console.error("Erro ao inserir dados no banco de dados:", err.message); // Logging do erro
       return res.status(500).json({ error: err.message });
@@ -106,9 +107,9 @@ app.get('/usuarios/:id', (req, res) => {
 // Endpoint para atualizar um usuário pelo ID (Update)
 app.put('/usuarios/:id', (req, res) => {
   const { id } = req.params;
-  const { nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo } = req.body;
-  const sql = `UPDATE usuarios SET nome = ?, como_conheceu = ?, conteudo = ?, sugestao = ?, classificacao = ?, genero = ?, resumo = ? WHERE id = ?`;
-  db.run(sql, [nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo, id], function(err) {
+  const { nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo } = req.body;
+  const sql = `UPDATE usuarios SET nome = ?, email = ?, como_conheceu = ?, conteudo = ?, sugestao = ?, classificacao = ?, genero = ?, resumo = ? WHERE id = ?`;
+  db.run(sql, [nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo, id], function(err) {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
