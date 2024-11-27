@@ -53,9 +53,9 @@ if (nextReviewButton) { // Verifica se o botão existe
 // Estrutura de dados com os reviews
 const reviews = [
     { title: "Resident Evil 7", url: "reviews.html" },
-    { title: "Need for Speed Underground 2", url: "Need underground 2.html" },
+    { title: "Need for Speed Underground 2", url: "Need_underground_2.html" },
     { title: "Subnautica", url: "Subnautica.html" },
-    { title: "GTA san Andreas", url: "GTA San Andreas.html"},
+    { title: "GTA san Andreas", url: "GTA_San_Andreas.html"},
     { title: "Dark souls 2", url: "Darksouls2.html"}
     // Add mais reviews aqui
 ];
