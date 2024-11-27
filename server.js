@@ -29,6 +29,17 @@ db.serialize(() => {
   )`);
 });
 
+// Adicionar um usuário manualmente
+db.serialize(() => {
+  const sql = `INSERT INTO usuarios (nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo) VALUES (?, ?, ?, ?, ?, ?, ?)`;
+  db.run(sql, ['João', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'jpsilva.cg@gmail.com'], function(err) {
+    if (err) {
+      return console.error(err.message);
+    }
+    console.log('Usuário João adicionado com sucesso');
+  });
+});
+
 // Rota raiz
 app.get('/', (req, res) => {
   res.send('Olá, LevelUp Reviews!');
