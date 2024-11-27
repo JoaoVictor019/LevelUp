@@ -7,19 +7,11 @@ const port = 4000;
 app.use(express.json());
 app.use(express.static(path.join(__dirname))); // Servir arquivos estáticos
 
-// Conexão com o banco de dados SQLite
-const db = new sqlite3.Database('./database.db', (err) => {
-  if (err) {
-    console.error(err.message);
-  }
-  console.log('Conectado ao banco de dados SQLite.');
-});
-
 // Função para adicionar colunas se elas não existirem
 const addColumnIfNotExists = (db, column) => {
   db.run(`ALTER TABLE usuarios ADD COLUMN ${column}`, [], function(err) {
     if (err && err.message.includes("duplicate column name")) {
-      console.log(`Coluna ${column} já existe`);
+      console.log(`Coluna ${column.split(' ')[0]} já existe`);
     } else if (err) {
       console.error(`Erro ao adicionar a coluna ${column}:`, err.message);
     } else {
@@ -28,17 +20,23 @@ const addColumnIfNotExists = (db, column) => {
   });
 };
 
-// Criação da tabela usuários e adição de colunas se necessário
-db.serialize(() => {
+// Conexão com o banco de dados SQLite
+const db = new sqlite3.Database('./database.db', (err) => {
+  if (err) {
+    console.error(err.message);
+  }
+  console.log('Conectado ao banco de dados SQLite.');
+
+  // Criação da tabela usuários e adição de colunas se necessário
   db.run(`CREATE TABLE IF NOT EXISTS usuarios (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT NOT NULL,
-    como_conheceu TEXT NOT NULL,
-    conteudo TEXT NOT NULL,
+    como_conheceu TEXT,
+    conteudo TEXT,
     sugestao TEXT,
-    classificacao TEXT NOT NULL,
-    genero TEXT NOT NULL,
-    resumo TEXT NOT NULL
+    classificacao TEXT,
+    genero TEXT,
+    resumo TEXT
   )`, [], function(err) {
     if (!err) {
       // Adiciona colunas que estão faltando (se necessário)
@@ -55,7 +53,7 @@ db.serialize(() => {
 // Adicionar um usuário manualmente
 db.serialize(() => {
   const sql = `INSERT INTO usuarios (nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo) VALUES (?, ?, ?, ?, ?, ?, ?)`;
-  db.run(sql, ['João', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'jpsilva.cg@gmail.com'], function(err) {
+  db.run(sql, ['João', 'Indicação de um amigo', 'Sim, o conteúdo é bem legal', 'N/A', '5 Estrelas', 'Aventura', 'Jogo excelente'], function(err) {
     if (err) {
       return console.error(err.message);
     }
