@@ -15,7 +15,20 @@ const db = new sqlite3.Database('./database.db', (err) => {
   console.log('Conectado ao banco de dados SQLite.');
 });
 
-// Criação da tabela usuários
+// Função para adicionar colunas se elas não existirem
+const addColumnIfNotExists = (db, column) => {
+  db.run(`ALTER TABLE usuarios ADD COLUMN ${column}`, [], function(err) {
+    if (err && err.message.includes("duplicate column name")) {
+      console.log(`Coluna ${column} já existe`);
+    } else if (err) {
+      console.error(`Erro ao adicionar a coluna ${column}:`, err.message);
+    } else {
+      console.log(`Coluna ${column} adicionada com sucesso`);
+    }
+  });
+};
+
+// Criação da tabela usuários e adição de colunas se necessário
 db.serialize(() => {
   db.run(`CREATE TABLE IF NOT EXISTS usuarios (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -26,7 +39,17 @@ db.serialize(() => {
     classificacao TEXT NOT NULL,
     genero TEXT NOT NULL,
     resumo TEXT NOT NULL
-  )`);
+  )`, [], function(err) {
+    if (!err) {
+      // Adiciona colunas que estão faltando (se necessário)
+      addColumnIfNotExists(db, 'como_conheceu TEXT NOT NULL');
+      addColumnIfNotExists(db, 'conteudo TEXT NOT NULL');
+      addColumnIfNotExists(db, 'sugestao TEXT');
+      addColumnIfNotExists(db, 'classificacao TEXT NOT NULL');
+      addColumnIfNotExists(db, 'genero TEXT NOT NULL');
+      addColumnIfNotExists(db, 'resumo TEXT NOT NULL');
+    }
+  });
 });
 
 // Adicionar um usuário manualmente
@@ -47,10 +70,12 @@ app.get('/', (req, res) => {
 
 // Endpoint para adicionar usuários (Create) com redirecionamento para a página de agradecimento
 app.post('/usuarios', (req, res) => {
+  console.log("Dados recebidos:", req.body); // Logging dos dados recebidos
   const { nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo } = req.body;
   const sql = `INSERT INTO usuarios (nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo) VALUES (?, ?, ?, ?, ?, ?, ?)`;
   db.run(sql, [nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo], function(err) {
     if (err) {
+      console.error("Erro ao inserir dados no banco de dados:", err.message); // Logging do erro
       return res.status(500).json({ error: err.message });
     }
     res.redirect('/agradecimento.html');
