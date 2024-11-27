@@ -9,7 +9,7 @@ Aqui na LevelUp Reviews, acreditamos que os jogos são mais do que apenas passat
 </div>
 🕹️ O que você encontrará aqui:
 
-Análises detalhadas e poéticas que iluminam as nuances de cada jogo.
+Análises detalhadas e poéticas que iluminam as modulações de cada jogo.
 Um toque de humor para tornar cada leitura leve e divertida.
 Dicas e insights para enriquecer sua experiência de jogo.
 
