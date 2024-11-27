@@ -20,7 +20,12 @@ db.serialize(() => {
   db.run(`CREATE TABLE IF NOT EXISTS usuarios (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT NOT NULL,
-    email TEXT NOT NULL
+    como_conheceu TEXT NOT NULL,
+    conteudo TEXT NOT NULL,
+    sugestao TEXT,
+    classificacao TEXT NOT NULL,
+    genero TEXT NOT NULL,
+    resumo TEXT NOT NULL
   )`);
 });
 
@@ -31,9 +36,9 @@ app.get('/', (req, res) => {
 
 // Endpoint para adicionar usuários (Create) com redirecionamento para a página de agradecimento
 app.post('/usuarios', (req, res) => {
-  const { nome, email } = req.body;
-  const sql = `INSERT INTO usuarios (nome, email) VALUES (?, ?)`;
-  db.run(sql, [nome, email], function(err) {
+  const { nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo } = req.body;
+  const sql = `INSERT INTO usuarios (nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo) VALUES (?, ?, ?, ?, ?, ?, ?)`;
+  db.run(sql, [nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo], function(err) {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -67,9 +72,9 @@ app.get('/usuarios/:id', (req, res) => {
 // Endpoint para atualizar um usuário pelo ID (Update)
 app.put('/usuarios/:id', (req, res) => {
   const { id } = req.params;
-  const { nome, email } = req.body;
-  const sql = `UPDATE usuarios SET nome = ?, email = ? WHERE id = ?`;
-  db.run(sql, [nome, email, id], function(err) {
+  const { nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo } = req.body;
+  const sql = `UPDATE usuarios SET nome = ?, como_conheceu = ?, conteudo = ?, sugestao = ?, classificacao = ?, genero = ?, resumo = ? WHERE id = ?`;
+  db.run(sql, [nome, como_conheceu, conteudo, sugestao, classificacao, genero, resumo, id], function(err) {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
