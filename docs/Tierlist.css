@@ -1,3 +1,6 @@
+
+
+```css
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /* Aplicar a fonte customizada somente ao cabeçalho (navegação) */
@@ -65,7 +68,21 @@ a:visited {
     100% { transform: scale(1); }
 }
 
+/* Mobile-first approach */
+body {
+    color: white;
+    background-image: url(fundos/fundo tierlist.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensures background stays fixed on scroll */
+    font-family: sans-serif; 
+}
+
 @media (max-width: 768px) {
+    body {
+        background-size: contain; /* Adjust background size for smaller screens */
+    }
+
     .navegacao {
         flex-direction: column;
         align-items: flex-start;
