@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <title>LevelUp Home</title>
     <meta charset="UTF-8">
@@ -8,10 +7,19 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <style>
+        #mensagemSucesso {
+            display: none;
+            color: limegreen;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
 </head>
 
 <body>
-
     <div class="navegacao">
         <div class="logo">
             <img src="fundos/Logo_LevelUp_atualizada.png" class="img-fluid" alt="Logo LevelUp" style="max-width: 290px; height: auto;">
@@ -33,25 +41,38 @@
     <div class="conteudoPrincipal">
         <h1>Saudações</h1>
         <p>
-            Bem-vindo(a) à LevelUp Reviews! Somos um site que oferece análises de jogos em geral, mas com um toque poético para mostrar uma perspectiva diferente, sem abrir mão do humor, é claro.
+            Bem-vindo(a) à LevelUp Reviews! Somos um site que oferece análises de jogos com humor e poesia para reimaginar o universo gamer.
         </p>
         <p>
-            Você já ouviu o ditado "As melhores ideias surgem na mesa de um bar"? Pois bem, o projeto LevelUp surgiu de uma forma semelhante, mas não foi em um bar — foi durante uma aula de desenvolvimento web na faculdade. Enquanto discutíamos sobre projetos, surgiu a ideia: "Por que não criar um site sobre jogos?" E assim nasceu a LevelUp, com a mesma energia criativa que fluiria em uma mesa de bar.
+            Nosso projeto nasceu numa aula de desenvolvimento web — e com energia de barzinho entre amigos, surgiu essa ideia maluca e maravilhosa: criar um site só nosso sobre jogos.
         </p>
         <p>
-            Aqui, você vai perceber o toque individual de cada membro do grupo. Cada review traz as perspectivas únicas de seus autores sobre os jogos, suas histórias, mecânicas e até suas inteligências artificiais. Nosso objetivo é oferecer uma visão geral e multifacetada, para que você possa descobrir novas maneiras de enxergar os jogos que já ama, ou, se ainda não os conhece, quem sabe se animar a experimentá-los. Falaremos tanto de clássicos quanto de lançamentos recentes, sempre com o intuito de enriquecer sua experiência como jogador.
+            Cada review aqui carrega a personalidade de quem o escreveu. A gente fala de mecânica, narrativa, IA e o que mais der vontade. Dos clássicos aos lançamentos, nossa missão é fazer você ver os jogos com outros olhos.
         </p>
         <p>
-            Na barra de navegação acima, você encontrará nossos reviews, sugestões de jogos escolhidos pela nossa equipe, uma coletânea de memes cuidadosamente selecionados, e nossa tier list de jogos. Estamos constantemente atualizando o site, então espere por muitas novidades. Continue explorando e aproveite! Nos vemos por aí, jogador!
+            Explore as seções acima — reviews, memes, tier list… e fique ligado nas novidades. Nos vemos pelas fases da vida, jogador!
         </p>
 
         <div class="gif-container">
             <img src="fundos/poke2.gif" height="90" width="90" style="padding: 20px; margin: auto;" alt="GIF Poke 2">
         </div>
+
+        <!-- Mensagem de agradecimento -->
+        <p id="mensagemSucesso">🎉 Obrigado por enviar seus dados! Você será redirecionado... 🎮</p>
     </div>
 
-     <script src="index.js"></script>
+    <script>
+        // Verifica se a URL tem ?agradecimento
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('agradecimento')) {
+            const mensagem = document.getElementById('mensagemSucesso');
+            mensagem.style.display = 'block';
 
+            // Redireciona após alguns segundos (opcional)
+            setTimeout(() => {
+                window.location.href = '/';
+            }, 4000);
+        }
+    </script>
 </body>
-
 </html>

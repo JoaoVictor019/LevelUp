@@ -6,128 +6,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="formulario.css">
+    <style>
+      #mensagem {
+        display: none;
+        color: limegreen;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+        font-family: 'Press Start 2P', cursive;
+      }
+    </style>
 </head>
 <body>
     <div class="navegacao">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">    
-            <img src="fundos/Logo_LevelUp_atualizada.png" class="img-fluid" style="max-width: 290px; height: auto;" alt="Logo do site">     
-            <a href="index.html" class="text-dark mx-2">Home</a>
-            <b>|</b>
-            <a href="reviews.html" class="text-dark mx-2">Reviews</a>
-            <b>|</b>
-            <a href="memes.html" class="text-dark mx-2">MEMES</a>
-            <b>|</b>
-            <a href="Tierlist.html" class="text-dark mx-2">Tier List</a>
-            <img src="fundos/poke.gif" class="img-fluid" style="max-width: 50px; height: auto;" alt="Gif de pokemon emerald">
+            <img src="fundos/Logo_LevelUp_atualizada.png" style="max-width: 290px; height: auto;" alt="Logo do site">     
+            <a href="index.html">Home</a><b>|</b>
+            <a href="reviews.html">Reviews</a><b>|</b>
+            <a href="memes.html">MEMES</a><b>|</b>
+            <a href="Tierlist.html">Tier List</a>
+            <img src="fundos/poke.gif" style="max-width: 50px; height: auto;" alt="Gif de pokemon emerald">
         </div>
     </div>
 
     <div class="conteudoPrincipal">
-        <h1 class="text-center mb-4">Bem-vindo(a) à página de formulário</h1>
-        <p class="text-center mb-4">Ajude-nos a entender melhor seus gostos e os do nosso público! Preencha o formulário abaixo:</p>
+        <h1 class="text-center">Bem-vindo(a) à página de formulário</h1>
+        <p class="text-center">Ajude-nos a entender melhor seus gostos e os do nosso público! Preencha o formulário abaixo:</p>
 
-        <form id="formUsuario" class="w-100 mx-auto" action="/usuarios" method="POST" style="max-width: 500px;">
-            <div class="form-group">
-                <label for="nome" class="required">Seu nome ou nick:</label>
-                <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome ou nick" required>
-            </div>
+        <form id="formUsuario" style="max-width: 500px; margin: auto;">
+            <label for="nome">Seu nome ou nick:</label>
+            <input type="text" id="nome" name="nome" required>
 
-            <div class="form-group">
-                <label for="como-conheceu" class="required">Como conheceu nosso site?</label>
-                <select id="como-conheceu" name="como_conheceu" class="form-control" required>
-                    <option value="">Selecione</option>
-                    <option value="Indicação de um amigo">Indicação de um amigo</option>
-                    <option value="Vi uma publicidade">Vi uma publicidade</option>
-                    <option value="Achei sem querer querendo">Achei sem querer querendo</option>
-                </select>
-            </div>
+            <label for="como-conheceu">Como conheceu nosso site?</label>
+            <select id="como-conheceu" name="como_conheceu" required>
+                <option value="">Selecione</option>
+                <option value="Indicação de um amigo">Indicação de um amigo</option>
+                <option value="Vi uma publicidade">Vi uma publicidade</option>
+                <option value="Achei sem querer querendo">Achei sem querer querendo</option>
+            </select>
 
-            <div class="form-group">
-                <label for="conteudo" class="required">Está gostando do conteúdo?</label>
-                <select id="conteudo" name="conteudo" class="form-control" required>
-                    <option value="">Selecione</option>
-                    <option value="Sim, o conteúdo é bem legal">Sim, o conteúdo é bem legal</option>
-                    <option value="Mais ou menos, tenho ressalvas">Mais ou menos, tenho ressalvas</option>
-                    <option value="Não estou gostando">Não estou gostando</option>
-                </select>
-            </div>
+            <label for="conteudo">Está gostando do conteúdo?</label>
+            <select id="conteudo" name="conteudo" required>
+                <option value="">Selecione</option>
+                <option value="Sim, o conteúdo é bem legal">Sim, o conteúdo é bem legal</option>
+                <option value="Mais ou menos, tenho ressalvas">Mais ou menos, tenho ressalvas</option>
+                <option value="Não estou gostando">Não estou gostando</option>
+            </select>
 
-            <div class="form-group">
-                <label for="sugestao" class="required">Sugestão de jogo:</label>
-                <input type="text" id="sugestao" name="sugestao" class="form-control" placeholder="Digite sua sugestão de jogo">
-            </div>
+            <label for="sugestao">Sugestão de jogo:</label>
+            <input type="text" id="sugestao" name="sugestao">
 
-            <div class="form-group">
-                <label for="classificacao" class="required">Qual nota você daria para esse jogo?</label>
-                <select id="classificacao" name="classificacao" class="form-control" required>
-                    <option value="">Selecione</option>
-                    <option value="1">1 Estrela</option>
-                    <option value="2">2 Estrelas</option>
-                    <option value="3">3 Estrelas</option>
-                    <option value="4">4 Estrelas</option>
-                    <option value="5">5 Estrelas</option>
-                </select>
-            </div>
+            <label for="classificacao">Qual nota você daria para esse jogo?</label>
+            <select id="classificacao" name="classificacao" required>
+                <option value="">Selecione</option>
+                <option value="1">1 Estrela</option>
+                <option value="2">2 Estrelas</option>
+                <option value="3">3 Estrelas</option>
+                <option value="4">4 Estrelas</option>
+                <option value="5">5 Estrelas</option>
+            </select>
 
-            <div class="form-group">
-                <label for="genero" class="required">A que gênero pertence o jogo? (FPS, terror etc.):</label>
-                <input type="text" id="genero" name="genero" class="form-control" placeholder="Digite o gênero do jogo" required>
-            </div>
+            <label for="genero">A que gênero pertence o jogo?</label>
+            <input type="text" id="genero" name="genero" required>
 
-            <div class="form-group">
-                <label for="resumo" class="required">Pode nos dar um breve resumo do jogo que você escolheu?</label>
-                <textarea id="resumo" name="resumo" rows="4" class="form-control" placeholder="Digite o resumo do jogo" required></textarea>
-            </div>
+            <label for="resumo">Breve resumo do jogo:</label>
+            <textarea id="resumo" name="resumo" rows="4" required></textarea>
 
-            <button type="submit" class="submit-btn">Enviar formulário</button>
+            <button type="submit">Enviar formulário</button>
         </form>
 
-        <div id="mensagem" class="text-center mt-4"></div>
+        <div id="mensagem">🎉 Obrigado por enviar seus dados! Sucesso na sua jornada gamer! 🎮</div>
+
         <div class="text-center mt-4">
-            <img src="fundos/jolteon.gif" class="img-fluid" style="max-width: 110px;" alt="Um pequeno pokemon raposa amarelo">
+            <img src="fundos/jolteon.gif" style="max-width: 110px;" alt="Um pequeno pokemon raposa amarelo">
         </div>
     </div>
 
     <script>
         document.getElementById('formUsuario').addEventListener('submit', async function(event) {
-            event.preventDefault(); // Impede o envio do formulário padrão
-
-            const nome = document.getElementById('nome').value;
-            const como_conheceu = document.getElementById('como-conheceu').value;
-            const conteudo = document.getElementById('conteudo').value;
-            const sugestao = document.getElementById('sugestao').value;
-            const classificacao = document.getElementById('classificacao').value;
-            const genero = document.getElementById('genero').value;
-            const resumo = document.getElementById('resumo').value;
+            event.preventDefault();
 
             const dados = {
-                nome,
-                como_conheceu,
-                conteudo,
-                sugestao,
-                classificacao,
-                genero,
-                resumo
+                nome: document.getElementById('nome').value,
+                como_conheceu: document.getElementById('como-conheceu').value,
+                conteudo: document.getElementById('conteudo').value,
+                sugestao: document.getElementById('sugestao').value,
+                classificacao: document.getElementById('classificacao').value,
+                genero: document.getElementById('genero').value,
+                resumo: document.getElementById('resumo').value
             };
 
             try {
                 const response = await fetch('/usuarios', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(dados)
                 });
 
+                const mensagem = document.getElementById('mensagem');
+
                 if (response.ok) {
-                    // Redireciona para a página de agradecimento
-                    window.location.href = '/agradecimento.html';
+                    mensagem.textContent = '🎉 Obrigado por enviar seus dados! Sucesso na sua jornada gamer! 🎮';
+                    mensagem.style.display = 'block';
+                    this.reset();
+
+                    setTimeout(() => {
+                        mensagem.style.display = 'none';
+                    }, 6000);
                 } else {
-                    document.getElementById('mensagem').innerText = 'Erro ao enviar dados.';
+                    mensagem.textContent = '❌ Erro ao enviar os dados. Tente novamente!';
+                    mensagem.style.display = 'block';
                 }
             } catch (error) {
                 console.error('Erro:', error);
-                document.getElementById('mensagem').innerText = 'Erro ao enviar dados.';
+                const mensagem = document.getElementById('mensagem');
+                mensagem.textContent = '⚠️ Ocorreu um erro inesperado.';
+                mensagem.style.display = 'block';
             }
         });
     </script>
