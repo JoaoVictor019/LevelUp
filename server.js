@@ -50,7 +50,7 @@ app.post('/usuarios', (req, res) => {
       console.error("Erro ao inserir dados:", err.message);
       return res.status(500).json({ error: err.message });
     }
-    res.redirect('/agradecimento.html'); // Certifique-se que esse arquivo existe em 'docs'
+    res.redirect('/sucesso'); // Certifique-se que esse arquivo existe em 'docs'
   });
 });
 
