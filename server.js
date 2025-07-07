@@ -1,33 +1,23 @@
+// Importando módulos necessários
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const app = express();
 const port = 4000;
 
+// Middleware para interpretar JSON e servir arquivos estáticos da pasta 'docs'
 app.use(express.json());
-app.use(express.static(path.join(__dirname))); // Servir arquivos estáticos
+app.use(express.static(path.join(__dirname, 'docs'))); // Tudo dentro de 'docs' é acessível via navegador
 
-// Função para adicionar colunas se elas não existirem
-const addColumnIfNotExists = (db, column) => {
-  db.run(`ALTER TABLE usuarios ADD COLUMN ${column}`, [], function(err) {
-    if (err && err.message.includes("duplicate column name")) {
-      console.log(`Coluna ${column.split(' ')[0]} já existe`);
-    } else if (err) {
-      console.error(`Erro ao adicionar a coluna ${column}:`, err.message);
-    } else {
-      console.log(`Coluna ${column} adicionada com sucesso`);
-    }
-  });
-};
-
-// Conexão com o banco de dados SQLite
+// Conectando ao banco de dados SQLite
 const db = new sqlite3.Database('./database.db', (err) => {
   if (err) {
-    console.error(err.message);
+    console.error(err.message); // Exibe erro caso a conexão falhe
+  } else {
+    console.log('✅ Conectado ao banco de dados SQLite.');
   }
-  console.log('Conectado ao banco de dados SQLite.');
 
-  // Criação da tabela usuários e adição de colunas se necessário
+  // Criação da tabela 'usuarios' com todos os campos necessários
   db.run(`CREATE TABLE IF NOT EXISTS usuarios (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT NOT NULL,
@@ -38,97 +28,69 @@ const db = new sqlite3.Database('./database.db', (err) => {
     classificacao TEXT,
     genero TEXT,
     resumo TEXT
-  )`, [], function(err) {
-    if (!err) {
-      // Adiciona colunas que estão faltando (se necessário)
-      addColumnIfNotExists(db, 'como_conheceu TEXT NOT NULL');
-      addColumnIfNotExists(db, 'conteudo TEXT NOT NULL');
-      addColumnIfNotExists(db, 'sugestao TEXT');
-      addColumnIfNotExists(db, 'classificacao TEXT NOT NULL');
-      addColumnIfNotExists(db, 'genero TEXT NOT NULL');
-      addColumnIfNotExists(db, 'resumo TEXT NOT NULL');
-    }
-  });
+  )`);
 });
 
-// Adicionar um usuário manualmente
-db.serialize(() => {
-  const sql = `INSERT INTO usuarios (nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
-  db.run(sql, ['João', 'jpsilva.cg@gmail.com', 'Indicação de um amigo', 'Sim, o conteúdo é bem legal', 'N/A', '5 Estrelas', 'Aventura', 'Jogo excelente'], function(err) {
-    if (err) {
-      return console.error(err.message);
-    }
-    console.log('Usuário João adicionado com sucesso');
-  });
-});
-
-// Rota raiz
+// Rota raiz — serve o arquivo HTML principal da aplicação
 app.get('/', (req, res) => {
-  res.send('Olá, LevelUp Reviews!');
+  res.sendFile(path.join(__dirname, 'docs', 'index.html'));
 });
 
-// Endpoint para adicionar usuários (Create) com redirecionamento para a página de agradecimento
+// Rota para adicionar usuários — recebe os dados e salva no banco
 app.post('/usuarios', (req, res) => {
-  console.log("Dados recebidos:", req.body); // Logging dos dados recebidos
   const { nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo } = req.body;
-  const sql = `INSERT INTO usuarios (nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
+
+  // Comando SQL para inserir novo usuário
+  const sql = `INSERT INTO usuarios (nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
+
+  // Executa inserção e redireciona para página de agradecimento
   db.run(sql, [nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo], function(err) {
     if (err) {
-      console.error("Erro ao inserir dados no banco de dados:", err.message); // Logging do erro
+      console.error("Erro ao inserir dados:", err.message);
       return res.status(500).json({ error: err.message });
     }
-    res.redirect('/agradecimento.html');
+    res.redirect('/agradecimento.html'); // Certifique-se que esse arquivo existe em 'docs'
   });
 });
 
-// Endpoint para obter todos os usuários (Read)
+// Rota para consultar todos os usuários cadastrados
 app.get('/usuarios', (req, res) => {
-  const sql = `SELECT * FROM usuarios`;
-  db.all(sql, [], (err, rows) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json(rows);
+  db.all(`SELECT * FROM usuarios`, [], (err, rows) => {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json(rows); // Retorna os dados como JSON
   });
 });
 
-// Endpoint para obter um usuário pelo ID (Read)
+// Rota para consultar um usuário específico por ID
 app.get('/usuarios/:id', (req, res) => {
-  const { id } = req.params;
-  const sql = `SELECT * FROM usuarios WHERE id = ?`;
-  db.get(sql, [id], (err, row) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
+  db.get(`SELECT * FROM usuarios WHERE id = ?`, [req.params.id], (err, row) => {
+    if (err) return res.status(500).json({ error: err.message });
     res.json(row);
   });
 });
 
-// Endpoint para atualizar um usuário pelo ID (Update)
+// Rota para atualizar dados de um usuário
 app.put('/usuarios/:id', (req, res) => {
-  const { id } = req.params;
   const { nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo } = req.body;
+
   const sql = `UPDATE usuarios SET nome = ?, email = ?, como_conheceu = ?, conteudo = ?, sugestao = ?, classificacao = ?, genero = ?, resumo = ? WHERE id = ?`;
-  db.run(sql, [nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo, id], function(err) {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json({ message: `Usuário com ID ${id} atualizado com sucesso` });
+
+  db.run(sql, [nome, email, como_conheceu, conteudo, sugestao, classificacao, genero, resumo, req.params.id], function(err) {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json({ message: `Usuário com ID ${req.params.id} atualizado com sucesso` });
   });
 });
 
-// Endpoint para excluir um usuário pelo ID (Delete)
+// Rota para excluir usuário
 app.delete('/usuarios/:id', (req, res) => {
-  const { id } = req.params;
-  const sql = `DELETE FROM usuarios WHERE id = ?`;
-  db.run(sql, [id], function(err) {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json({ message: `Usuário com ID ${id} excluído com sucesso` });
+  db.run(`DELETE FROM usuarios WHERE id = ?`, [req.params.id], function(err) {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json({ message: `Usuário com ID ${req.params.id} excluído com sucesso` });
   });
 });
 
+// Inicializa o servidor
 app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
+  console.log(`🚀 Servidor rodando em: http://localhost:${port}`);
 });
